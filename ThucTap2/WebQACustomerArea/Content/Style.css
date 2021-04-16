@@ -5,7 +5,11 @@
 #header h1{margin:0;line-height:1em }
 #header h1.dotmark{line-height:1.5em;}
 #header{ padding-top:44px;}
-.logo {padding-top: 11px;display: block;}
+.logo {
+    padding-top: 11px;
+    float: left;
+    width: 20%;
+}
 .logo span{display:none}
 .dotmark{padding:4px; font-size:14px; line-height:1.5em;  background:#fff; border:1px dashed rgb(252, 111, 0); margin:0; color:rgb(252, 111, 0); position:relative;}
 .dotmark:hover{ border:1px dashed #fff; color:#fff; background:rgb(252, 111, 0);}
@@ -25,7 +29,7 @@ hr.soften {margin: 8px 0;background: #DDD;}
 #myCarousel.homCar .item img{width:100%; max-height:400px}
 #myCarousel .btn {border: 0 none;border-radius: 0 0 0 0;bottom: 49px;font-size: 18px;line-height: 42px;padding: 0 28px;position: absolute;right: 0;text-shadow: 0 0 0 transparent;}	
 #myCarousel{position:relative; margin: 0;}
-.navbar-inner {padding-left: 0;padding-right: 0;}
+.navbar-inner {padding-left: 0;padding-right: 0;width:95%}
 .thumbnail .btn{ border-radius: 0 0 0 0;}
 .thumbnail h4{line-height:42px}
 .thumbnail img{ max-width:100%}
@@ -72,8 +76,15 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .cart{border:1px solid #ddd;  }
 #sidebar ul {margin: 0;padding: 0;}
 #sidebar .alert {padding: 8px;}
-#sidebar .nav a{color:#000;font-weight:500}
-#sidebar .nav a:hover{color:#f89406}
+#sidebar .nav a {
+    color: #777777;
+    font-weight: 500;
+}
+    #sidebar .nav a:hover {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #f89406;
+    }
 #sidebar .cart{border:1px solid #B94A48; }
 #sidebar h4{margin:0;  line-height:1.5em; padding:0 13px;  }
 #sidebar h2{font-size:21px; line-height:21px;}

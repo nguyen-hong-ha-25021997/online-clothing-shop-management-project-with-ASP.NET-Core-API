@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="32db76d0c990446a98a2f1e12366adfb" Name="Diagram1">
+        <EntityTypeShape EntityType="DbWebQAModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.Account" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.AspNetRoleClaim" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.AspNetUserClaim" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.AspNetUserLogin" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.AspNetUserToken" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.Category" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.Function" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.Order" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.OrderDetail" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.Permission" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebQAModel.Product" Width="1.5" PointX="3" PointY="18.75" IsExpanded="true" />
+        <AssociationConnector Association="DbWebQAModel.FK_AspNetUserClaims_Account_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.FK_AspNetUserLogins_Account_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.FK_AspNetUserTokens_Account_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.FK_Order_Account_Account_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.FK_Permissions_Account_AccountId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.FK_AspNetRoleClaims_Function_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.FK_Product_Category_Category_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.FK_Permissions_Function_FunctionId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.FK_OrderDetail_Order_Order_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.FK_OrderDetail_Product_Product_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebQAModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

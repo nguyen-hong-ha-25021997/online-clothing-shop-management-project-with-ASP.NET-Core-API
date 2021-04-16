@@ -259,6 +259,18 @@ namespace WebsiteData.Migrations
                     b.Property<int?>("Account_Id")
                         .HasColumnType("int");
 
+                    b.Property<string>("CustomerAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerMobile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Order_Amount")
                         .HasColumnType("int");
 
@@ -278,6 +290,9 @@ namespace WebsiteData.Migrations
 
                     b.Property<int>("Order_Status")
                         .HasColumnType("int");
+
+                    b.Property<string>("PaymentMethod")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Order_Id");
 
@@ -353,6 +368,9 @@ namespace WebsiteData.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Product_Price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Product_Quantity")
                         .HasColumnType("int");
 
                     b.Property<string>("Product_Show")

@@ -173,7 +173,8 @@ namespace APIManager.Controllers
                                    where user.Id == a.Id
                                    select new
                                    {
-                                       f.Name
+                                       f.Name,
+                                       a.UserName
                                    }).ToList();
 
                 string result = "[";
@@ -203,7 +204,7 @@ namespace APIManager.Controllers
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var securityToken = tokenHandler.CreateToken(tokenDescriptor);
                 var token = tokenHandler.WriteToken(securityToken);
-                return Ok(new { token });
+                return Ok(new { token, model = user });
             }
             else
                 return BadRequest(new { message = "Username or password is incorrect." });

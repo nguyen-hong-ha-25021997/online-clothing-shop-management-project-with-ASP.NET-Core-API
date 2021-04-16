@@ -16,6 +16,7 @@ namespace WebsiteData.Entities
         public string Product_Show { get; set; }
         public int Product_Price { get; set; }
         public string Product_Note { get; set; }
+        public int Product_Quantity { get; set; }
         public ProductStatusPriceEnum StatusPrice { get; set; }
         public Category Category { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }

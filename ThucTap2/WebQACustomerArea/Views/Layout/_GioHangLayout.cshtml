@@ -3,101 +3,150 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-
-
     <link href="~/Content/bootstrapa.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/userCss.css" rel="stylesheet" />
     <link href="~/Content/fontmin.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Style.css" rel="stylesheet" />
     <link href="~/Content/font.css" rel="stylesheet" />
     <link href="~/favicon.ico" rel="shortcut icon" />
-    <link href="~/fonts/Use.css" rel="stylesheet" />
 
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="topNav">
             <div class="container">
-                <div class="alignR">
-                    <div class="pull-left socialNw">
-                        <a href="#"><span></span></a>
-                        <a href="#"><span></span></a>
-                        <a href="#"><span></span></a>
-                        <a href="#"><span></span></a>
-                    </div>
-
-                </div>
+                <div class="alignR"></div>
             </div>
         </div>
     </div>
-
     <!--
     MenuTrangChu
      -->
     <div class="container">
-        <div id="gototop"> </div>
-        <header id="header" style="padding-top:44px">
-            <div class="row">
-                <div class="span4">
-                    <h1>
-                        <a class="logo" href="index.html">
-                            <span>Twitter Bootstrap ecommerce template</span>
-                            <img src="~/Images/images-logo-4Teen.png" />
-                        </a>
-                    </h1>
-                </div>
+        <div class="row" style="margin-bottom: 5%">
+            <div class="logo" style="margin-left: 4%">
+                <img src="~/Images/images-logo-4Teen.png" />
             </div>
-        </header>
-    </div>
-    <!--
-    Menu Trang Chu
-    -->
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container">
-                <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li class=""><a class="" href="@Url.Action("TrangChu","Home")">Trang chủ</a></li>
-                        <li class="dropdown">
-                            <a href="@Url.Action("SanPhamMoi","Home")">Sản phẩm</a>
-                            <ul class="dropdown-content">
-                                <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Vay"})">Váy</a></li>
-                                <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Quan"})">Quần</a></li>
-                                <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Ao"})">Áo</a></li>
-                            </ul>
-                        </li>
-                        <li class=""><a href="@Url.Action("AdLogin","AdLogIn")">Hệ thống</a></li>
-                        <li class=""><a href="@Url.Action("DangKi","KhachHang")">Đăng kí</a></li>
-                        <li class="">
-                            <a style="float:left" href="@Url.Action("GioHang","GioHang")">Giỏ hàng</a>
-                            <span class="btn btn-mini" style="float:right"><a href="@Url.Action("GioHang","GioHang")">[ @Html.Action("TongSL", "giohang") ] </a></span>
-                        </li>
-                        <li class="" style="padding:8px">
-                            @using (Html.BeginForm("KetQuaTimKiem", "TimKiem", FormMethod.Post))
-                            {
-                                @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "search-query span2", @placeholder = "Search" })
+            <!--
+            Menu Trang Chu
+            -->
+            <div class="navbar" style="float: right; width: 70%">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <div class="nav-collapse">
+                            <ul class="nav" style="width: 100%">
+                                <li class=""><a class="" href="@Url.Action("TrangChu","Home")">Trang chủ</a></li>
+                                <li class="dropdown">
+                                    <a href="@Url.Action("SanPhamMoi","Home")">Sản phẩm</a>
+                                    <ul class="dropdown-content" style="width: 90px">
+                                        <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Vay"})">Váy</a></li>
+                                        <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Quan"})">Quần</a></li>
+                                        <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Ao"})">Áo</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown" style="width: 120px">
+                                    <a href="@Url.Action("DangNhap","KhachHang")">Đăng nhập</a>
+                                    <ul style="width:150px" class="dropdown-content">
+                                        <li><a href="@Url.Action("DangKi","KhachHang")">Đăng kí</a></li>
+                                        <li><a href="@Url.Action("AdLogin","AdLogIn")">Dành cho Admin</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <span><a style="float: left; padding: 5px 5px 10px; border: 0;" href="@Url.Action("GioHang","GioHang")"><img style="width:25px; height:25px" src="~/Images/giohang.jpg" /></a></span>
+                                    <span style="float:right;margin-left:5px;margin-top:10px"><a style="color: #000; text-decoration:none" href="@Url.Action("GioHang","GioHang")">@Html.Action("TongTien", "giohang")  đ </a></span>
+                                    <span style="float:right;margin-top:10px"><a style="color: #000; text-decoration:none" href="@Url.Action("GioHang","GioHang")">  -  @Html.Action("TongSL", "giohang")  -  </a></span>
+                                </li>
+                                <li class="" style="padding-top:8px; float:right">
+                                    @using (Html.BeginForm("KetQuaTimKiem", "TimKiem", FormMethod.Post))
+                                    {
+                                        @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "search-query span2", @placeholder = "Tìm kiếm" })
 
-                                <button type="submit"><img src="~/Images/1473536510_Search.png" /></button>
-                            }
-                        </li>
-                    </ul>
+                                        <button type="submit"><img src="~/Images/1473536510_Search.png" /></button>
+                                    }
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--
-    Body Section
-        DanhMuc sản phẩm
-    -->
-    </div>
-    <div>  @RenderBody()   </div>
+        <div class="slideshow-container" style=" margin-left: 7%; margin-bottom:5%">
+            <div class="mySlides fade" style="opacity: 1;">
+                <img style="width:100%;" src="~/Images/sb_1489472704_306.jpg" />
 
+            </div>
+            <div class="mySlides fade" style="opacity: 1;">
+                <img style="width: 100%" src="~/Images/sb_1490596751_719.jpg" />
+
+            </div>
+            <div class="mySlides fade" style="opacity: 1;">
+
+                <img style="width: 100%" src="~/Images/sb_1489483560_462 (1).jpg" />
+            </div>
+        </div>
+        <!--
+        Body Section
+            DanhMuc ben trai
+        -->
+        <div>
+            <div style="height:auto">
+                @RenderBody()
+            </div>
+        </div>
+        <footer class="footer" style="padding:20px;display:grid">
+            <div>
+                <i>
+                    HOTLINE: 079.325.3797
+                    Hệ thống 4Teen tại Hải Phòng<br />
+                    14 – 16 Mê Linh, Hải Phòng<br />
+
+                    14 Phạm Minh Đức, Hải Phòng<br /><br />
+                </i>
+            </div>
+            <div>
+                <i>
+                    VỀ CHÚNG TÔI<br />
+                    4Teen - Thương hiệu thời trang nữ hàng đầu dành cho giới trẻ.
+                </i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+    </script>
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.minb.js"></script>
+
+    <script src="~/Scripts/jquery.easing-1.3.min.js"></script>
+    <script src="~/Scripts/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="~/Scripts/shop.js"></script>
 </body>
+
+
+@RenderSection("footerJS", required: false)
 </html>

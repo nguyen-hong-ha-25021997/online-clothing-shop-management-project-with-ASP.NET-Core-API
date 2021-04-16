@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
+using WebQACustomerArea.Common;
 using WebQACustomerArea.Models;
+using WebQACustomerArea.NganLuongAPI;
 
 namespace WebQACustomerArea.Controllers
 {
     public class GioHangController : Controller
     {
+        private string merchantId = "49440";
+        private string merchantPassword = "1db0e9b420e85d4a81cb5f94bbf46620";
+        private string merchantEmail = "nguyenhongha250297@gmail.com";
+
         DbWebQAEntities db = new DbWebQAEntities();
         // GET: GioHang
         public ActionResult Index()
@@ -157,61 +164,100 @@ namespace WebQACustomerArea.Controllers
         #region Đặt hàng
 
         [HttpPost]
-        public ActionResult DatHang()
+        public ActionResult DatHang(string orderViewModel)
         {
+            var order = new JavaScriptSerializer().Deserialize<OrderViewModel>(orderViewModel);
+            ////Kiem tra dang nhap
+            //if (Session["TaiKhoan"] == null)
+            //{
+            //    return RedirectToAction("DangNhap", "KhachHang");
+            //}
+            ////Kiểm tra giỏ hàng
+            //if (Session["GioHang"] == null)
+            //{
+            //    return RedirectToAction("TrangChu", "Home");
 
-
-            //Kiem tra dang nhap
-            if (Session["TaiKhoan"] == null)
-            {
-                return RedirectToAction("DangNhap", "KhachHang");
-            }
-            //Kiểm tra giỏ hàng
-            if (Session["GioHang"] == null)
-            {
-                return RedirectToAction("TrangChu", "Home");
-
-            }
+            //}
             //Thêm đơn đặt hàng
-
             //Kiểm tra tài khoản 
-            Order dk = new Order();
-
-            Order hd = (Order)Session["HoaDon"];
-            Account kh = (Account)Session["TaiKhoan"];
+            Order od = new Order();
+            Account acc = (Account)Session["TaiKhoan"];
             List<GioHang> gh = laygiohang();
-            dk.Account_Id = kh.Id;
-            dk.Order_PurchaseTime = DateTime.Now;
-            dk.Order_DeliveryAddress = hd.Order_DeliveryAddress;
-            dk.Order_DeliveryContact = hd.Order_DeliveryContact;
-
-            db.Orders.Add(dk);
-
-            db.SaveChanges();//luu vao csdl
-
-
+            //od.Account_Id = acc.Id;
+            od.CustomerName = order.CustomerName;
+            od.Order_PurchaseTime = DateTime.Now;
+            od.CustomerAddress = order.CustomerAddress;
+            od.CustomerEmail = order.CustomerEmail;
+            od.CustomerMobile = order.CustomerMobile;
+            List<OrderDetail> orderDetails = new List<OrderDetail>();
             foreach (var item in gh)
             {
-                OrderDetail ct = new OrderDetail();
-                ct.Order_Id = dk.Order_Id;
-                ct.Product_Id = item.maSP;
-                ct.OrderDetail_Quantity = item.soluong;
-                db.OrderDetails.Add(ct);
+                OrderDetail odt = new OrderDetail();
+                odt.Order_Id = od.Order_Id;
+                odt.Product_Id = item.maSP;
+                odt.OrderDetail_Quantity = item.soluong;
+                odt.OrderDetail_Amount = (int)item.thanhtien;
+                db.OrderDetails.Add(odt);
+                Product pd = db.Products.FirstOrDefault(x => x.Product_Id == item.maSP);
+                pd.Product_Quantity = pd.Product_Quantity - item.soluong;
+                od.Order_Amount += (int)item.thanhtien;
             }
-
-
-
-
-            //Luu lai chi tiet don hang
-
-
+            //Luu lai csdl
+            db.Orders.Add(od);
             db.SaveChanges();
+            if (order.PaymentMethod == "CASH")
+            {
+                return Json(new
+                {
+                    status = true
+                });
+            }
+            else
+            {
+
+                var currentLink = "https://localhost:44336/";
+                RequestInfo info = new RequestInfo();
+                info.Merchant_id = merchantId;
+                info.Merchant_password = merchantPassword;
+                info.Receiver_email = merchantEmail;
 
 
-            return RedirectToAction("TrangChu", "Home");
+
+                info.cur_code = "vnd";
+                info.bank_code = order.BankCode;
+
+                info.Order_code = od.Order_Id.ToString();
+                info.Total_amount = gh.Sum(x => x.soluong * x.dongia).ToString();
+                info.fee_shipping = "0";
+                info.Discount_amount = "0";
+                info.order_description = "Thanh toán đơn hàng tại TeduShop";
+                info.return_url = currentLink + "xac-nhan-don-hang.html";
+                info.cancel_url = currentLink + "huy-don-hang.html";
+
+                info.Buyer_fullname = order.CustomerName;
+                info.Buyer_email = order.CustomerEmail;
+                info.Buyer_mobile = order.CustomerMobile;
+
+                APICheckoutV3 objNLChecout = new APICheckoutV3();
+                ResponseInfo result = objNLChecout.GetUrlCheckout(info, order.PaymentMethod);
+                if (result.Error_code == "00")
+                {
+                    return Json(new
+                    {
+                        status = true,
+                        urlCheckout = result.Checkout_url,
+                        message = result.Description
+                    });
+                }
+                else
+                    return Json(new
+                    {
+                        status = false,
+                        message = result.Description
+                    });
+            }
         }
         #endregion
-
 
     }
 }

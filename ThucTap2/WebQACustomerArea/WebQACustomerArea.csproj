@@ -70,6 +70,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -90,10 +93,6 @@
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
@@ -135,6 +134,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\ConfigHelper.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
@@ -142,57 +142,61 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetRoleClaim.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserClaim.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserLogin.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserToken.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryViewModel.cs" />
     <Compile Include="Models\C__EFMigrationsHistory.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DbWebQA.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbWebQA.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DbWebQA.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbWebQA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DbWebQA.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbWebQA.edmx</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Function.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GioHang.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\Models.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Models.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Models.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Order.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderDetail.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\OrderViewModel.cs" />
     <Compile Include="Models\Permission.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
-      <DependentUpon>DbWebQA.tt</DependentUpon>
+      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="NganLuongAPI\APICheckoutV3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -205,8 +209,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrapa.css" />
+    <Content Include="Content\etalage.css" />
     <Content Include="Content\font.css" />
     <Content Include="Content\fontmin.css" />
+    <Content Include="Content\form.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Style.css" />
     <Content Include="Content\userCss.css" />
@@ -268,6 +274,7 @@
     <Content Include="Images\aophong1.jpg" />
     <Content Include="Images\aophong2.jpg" />
     <Content Include="Images\aophong3.jpg" />
+    <Content Include="Images\bank_logo.png" />
     <Content Include="Images\giohang.jpg" />
     <Content Include="Images\images-logo-4Teen.png" />
     <Content Include="Images\IMG_0135.PNG" />
@@ -296,44 +303,89 @@
     <Content Include="Images\vaybody3.jpg" />
     <Content Include="Images\vayxoe1.jpg" />
     <Content Include="Images\vayxoe2.jpg" />
+    <Content Include="Images\vayxoe3.jpg" />
+    <Content Include="Images\váy 4.jpg" />
     <Content Include="Images\yVwath_simg_ad6a59_806-806-0-0_cropf.jpg" />
-    <Content Include="Models\DbWebQA.Context.tt">
+    <Content Include="Models\Models.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DbWebQA.edmx</DependentUpon>
-      <LastGenOutput>DbWebQA.Context.cs</LastGenOutput>
+      <DependentUpon>Models.edmx</DependentUpon>
+      <LastGenOutput>Models.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DbWebQA.tt">
+    <Content Include="Models\Models.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DbWebQA.edmx</DependentUpon>
-      <LastGenOutput>DbWebQA.cs</LastGenOutput>
+      <DependentUpon>Models.edmx</DependentUpon>
+      <LastGenOutput>Models.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\Images\1436_DSC_0423.jpg" />
+    <Content Include="Resources\Images\1473536510_Search.png" />
+    <Content Include="Resources\Images\15032189_687600334740015_6713489818879130173_n.jpg" />
+    <Content Include="Resources\Images\15073315_903621419767920_1059965528111970867_n.jpg" />
+    <Content Include="Resources\Images\16640678_646270502226230_8934406003402852399_n.jpg" />
+    <Content Include="Resources\Images\16865036_238508056558611_1084424148780590593_n.jpg" />
+    <Content Include="Resources\Images\209.jpg" />
+    <Content Include="Resources\Images\983888_1772074009486366_7107897908891534059_n.jpg" />
+    <Content Include="Resources\Images\aophong1.jpg" />
+    <Content Include="Resources\Images\aophong2.jpg" />
+    <Content Include="Resources\Images\aophong3.jpg" />
+    <Content Include="Resources\Images\giohang.jpg" />
+    <Content Include="Resources\Images\images-logo-4Teen.png" />
+    <Content Include="Resources\Images\IMG_0135.PNG" />
+    <Content Include="Resources\Images\jer_0632_668x1000.jpg" />
+    <Content Include="Resources\Images\jer_0720_667x1000.jpg" />
+    <Content Include="Resources\Images\jer_0765_668x1000.jpg" />
+    <Content Include="Resources\Images\jer_1768_thumb_399x599.jpg" />
+    <Content Include="Resources\Images\jer_7442_668x1000.jpg" />
+    <Content Include="Resources\Images\quan1.jpg" />
+    <Content Include="Resources\Images\quan2.jpg" />
+    <Content Include="Resources\Images\quan3.jpg" />
+    <Content Include="Resources\Images\quansoc1.jpg" />
+    <Content Include="Resources\Images\quansoc2.jpg" />
+    <Content Include="Resources\Images\quansoc3.jpg" />
+    <Content Include="Resources\Images\sb_1489472704_306.jpg" />
+    <Content Include="Resources\Images\sb_1489483560_462 %281%29.jpg" />
+    <Content Include="Resources\Images\sb_1490072817_950.jpg" />
+    <Content Include="Resources\Images\sb_1490596751_719.jpg" />
+    <Content Include="Resources\Images\store_1456216701_450.jpg" />
+    <Content Include="Resources\Images\uy.png" />
+    <Content Include="Resources\Images\Vay1 %282%29.jpg" />
+    <Content Include="Resources\Images\Vay2.jpg" />
+    <Content Include="Resources\Images\Vay3.jpg" />
+    <Content Include="Resources\Images\vaybody1.jpg" />
+    <Content Include="Resources\Images\vaybody2.jpg" />
+    <Content Include="Resources\Images\vaybody3.jpg" />
+    <Content Include="Resources\Images\vayxoe1.jpg" />
+    <Content Include="Resources\Images\vayxoe2.jpg" />
+    <Content Include="Resources\Images\vayxoe3.jpg" />
+    <Content Include="Resources\Images\váy 4.jpg" />
+    <Content Include="Resources\Images\yVwath_simg_ad6a59_806-806-0-0_cropf.jpg" />
+    <EntityDeploy Include="Models\Models.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Models.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Models.edmx.diagram">
+      <DependentUpon>Models.edmx</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\DbWebQA.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DbWebQA.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DbWebQA.edmx.diagram">
-      <DependentUpon>DbWebQA.edmx</DependentUpon>
-    </Content>
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.js" />
-    <Content Include="Scripts\jquery-3.4.1.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\bootstrap.minb.js" />
+    <Content Include="AppSettings.config" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.easing-1.3.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.scrollTo-1.4.3.1-min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\shop.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\shoppingCart.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -356,7 +408,6 @@
     <Content Include="Views\Home\SanPhamMoiShow.cshtml" />
     <Content Include="Views\Home\SanPhamSales.cshtml" />
     <Content Include="Views\Home\SanPhamSalesShow.cshtml" />
-    <Content Include="Views\Home\TrangChu.cshtml" />
     <Content Include="Views\Home\TungLoaiSanPham.cshtml" />
     <Content Include="Views\Home\XemChiTietSanPham.cshtml" />
     <Content Include="Views\Layout\_GioHangLayout.cshtml" />
@@ -366,6 +417,8 @@
     <Content Include="Views\GioHang\SuaGioHang.cshtml" />
     <Content Include="Views\GioHang\TongSL.cshtml" />
     <Content Include="Views\GioHang\TongTien.cshtml" />
+    <Content Include="Views\Home\TrangChu.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -381,8 +434,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

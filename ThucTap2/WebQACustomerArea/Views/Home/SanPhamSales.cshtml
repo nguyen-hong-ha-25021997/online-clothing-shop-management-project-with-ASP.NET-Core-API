@@ -2,46 +2,37 @@
 @using PagedList.Mvc;
 @model PagedList.PagedList<Product>
 
-
-@Html.Action("dau", "Home")
+@{
+    ViewBag.Title = "Sản phẩm giảm giá";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <div class="well well-small">
-    <p><h3>Sản phẩm Sales</h3></p>
+    <p><h3>Sản phẩm giảm giá</h3></p>
     <hr class="soften" />
     <div class="row-fluid">
         <div id="newProductCar" class="carousel slide">
-
             <div class="carousel-inner">
                 <div class="item active">
                     <ul class="thumbnails">
-
                         @foreach (var item in Model)
                         {
-                            <li class="span4">
+                            <li class="sanpham">
                                 <div class="thumbnail">
-                                    <a class="zoomTool" href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"><span class="icon-search"></span> QUICK VIEW</a>
-                                    <a href="@Url.Action("XemChiTietSanPham", "Home", new { @MaSanPham = item.Product_Id})"><img src="@Url.Content("~/Images/"+item.Product_Image)"></a>
-                                    <div class="caption">
-                                        <h5>@item.Product_Show</h5>
-                                        <h4>
-                                            <a class="defaultBtn" href="product_details.html" title="Click to view"><span></span></a>
+                                    <a class="zoomTool" href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"><span class="icon-search"></span> Xem ngay</a>
+                                    <a href="#" class="tag"></a>
+                                    <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"><img src="@Url.Content("~/"+item.Product_Image)" /></a>
+                                    <p style="margin-top:8px">@item.Product_Show</p>
+                                    <p> <b>@item.Product_Price VNĐ</b></p>
 
-                                            <span class="pull-right">
-                                                @item.Product_Price VNĐ
-                                            </span>
-                                        </h4>
-                                    </div>
                                 </div>
                             </li>
                         }
-
                     </ul>
-
                 </div>
             </div>
-
             Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
             @Html.PagedListPager(Model, page => Url.Action("SanPhamSales", new { page = page }))
 
         </div>
     </div>
-    @Html.Action("cuoi", "Home")
+</div>

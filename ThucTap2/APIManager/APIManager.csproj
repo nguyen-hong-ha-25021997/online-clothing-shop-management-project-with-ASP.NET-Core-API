@@ -5,6 +5,99 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Rescouces\**" />
+    <Content Remove="Rescouces\**" />
+    <EmbeddedResource Remove="Rescouces\**" />
+    <None Remove="Rescouces\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\1436_DSC_0423.jpg" />
+    <None Remove="Resources\Images\1473536510_Search.png" />
+    <None Remove="Resources\Images\15032189_687600334740015_6713489818879130173_n.jpg" />
+    <None Remove="Resources\Images\15073315_903621419767920_1059965528111970867_n.jpg" />
+    <None Remove="Resources\Images\16640678_646270502226230_8934406003402852399_n.jpg" />
+    <None Remove="Resources\Images\16865036_238508056558611_1084424148780590593_n.jpg" />
+    <None Remove="Resources\Images\209.jpg" />
+    <None Remove="Resources\Images\983888_1772074009486366_7107897908891534059_n.jpg" />
+    <None Remove="Resources\Images\aophong1.jpg" />
+    <None Remove="Resources\Images\aophong2.jpg" />
+    <None Remove="Resources\Images\aophong3.jpg" />
+    <None Remove="Resources\Images\giohang.jpg" />
+    <None Remove="Resources\Images\images-logo-4Teen.png" />
+    <None Remove="Resources\Images\IMG_0135.PNG" />
+    <None Remove="Resources\Images\jer_0632_668x1000.jpg" />
+    <None Remove="Resources\Images\jer_0720_667x1000.jpg" />
+    <None Remove="Resources\Images\jer_0765_668x1000.jpg" />
+    <None Remove="Resources\Images\jer_1768_thumb_399x599.jpg" />
+    <None Remove="Resources\Images\jer_7442_668x1000.jpg" />
+    <None Remove="Resources\Images\quan1.jpg" />
+    <None Remove="Resources\Images\quan2.jpg" />
+    <None Remove="Resources\Images\quan3.jpg" />
+    <None Remove="Resources\Images\quansoc1.jpg" />
+    <None Remove="Resources\Images\quansoc2.jpg" />
+    <None Remove="Resources\Images\quansoc3.jpg" />
+    <None Remove="Resources\Images\sb_1489472704_306.jpg" />
+    <None Remove="Resources\Images\sb_1489483560_462 (1).jpg" />
+    <None Remove="Resources\Images\sb_1490072817_950.jpg" />
+    <None Remove="Resources\Images\sb_1490596751_719.jpg" />
+    <None Remove="Resources\Images\store_1456216701_450.jpg" />
+    <None Remove="Resources\Images\uy.png" />
+    <None Remove="Resources\Images\Vay1 (2).jpg" />
+    <None Remove="Resources\Images\Vay2.jpg" />
+    <None Remove="Resources\Images\Vay3.jpg" />
+    <None Remove="Resources\Images\vaybody1.jpg" />
+    <None Remove="Resources\Images\vaybody2.jpg" />
+    <None Remove="Resources\Images\vaybody3.jpg" />
+    <None Remove="Resources\Images\vayxoe1.jpg" />
+    <None Remove="Resources\Images\vayxoe2.jpg" />
+    <None Remove="Resources\Images\yVwath_simg_ad6a59_806-806-0-0_cropf.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Images\1436_DSC_0423.jpg" />
+    <Content Include="Resources\Images\1473536510_Search.png" />
+    <Content Include="Resources\Images\15032189_687600334740015_6713489818879130173_n.jpg" />
+    <Content Include="Resources\Images\15073315_903621419767920_1059965528111970867_n.jpg" />
+    <Content Include="Resources\Images\16640678_646270502226230_8934406003402852399_n.jpg" />
+    <Content Include="Resources\Images\16865036_238508056558611_1084424148780590593_n.jpg" />
+    <Content Include="Resources\Images\209.jpg" />
+    <Content Include="Resources\Images\983888_1772074009486366_7107897908891534059_n.jpg" />
+    <Content Include="Resources\Images\aophong1.jpg" />
+    <Content Include="Resources\Images\aophong2.jpg" />
+    <Content Include="Resources\Images\aophong3.jpg" />
+    <Content Include="Resources\Images\giohang.jpg" />
+    <Content Include="Resources\Images\images-logo-4Teen.png" />
+    <Content Include="Resources\Images\IMG_0135.PNG" />
+    <Content Include="Resources\Images\jer_0632_668x1000.jpg" />
+    <Content Include="Resources\Images\jer_0720_667x1000.jpg" />
+    <Content Include="Resources\Images\jer_0765_668x1000.jpg" />
+    <Content Include="Resources\Images\jer_1768_thumb_399x599.jpg" />
+    <Content Include="Resources\Images\jer_7442_668x1000.jpg" />
+    <Content Include="Resources\Images\quan1.jpg" />
+    <Content Include="Resources\Images\quan2.jpg" />
+    <Content Include="Resources\Images\quan3.jpg" />
+    <Content Include="Resources\Images\quansoc1.jpg" />
+    <Content Include="Resources\Images\quansoc2.jpg" />
+    <Content Include="Resources\Images\quansoc3.jpg" />
+    <Content Include="Resources\Images\sb_1489472704_306.jpg" />
+    <Content Include="Resources\Images\sb_1489483560_462 (1).jpg" />
+    <Content Include="Resources\Images\sb_1490072817_950.jpg" />
+    <Content Include="Resources\Images\sb_1490596751_719.jpg" />
+    <Content Include="Resources\Images\store_1456216701_450.jpg" />
+    <Content Include="Resources\Images\uy.png" />
+    <Content Include="Resources\Images\Vay1 (2).jpg" />
+    <Content Include="Resources\Images\Vay2.jpg" />
+    <Content Include="Resources\Images\Vay3.jpg" />
+    <Content Include="Resources\Images\vaybody1.jpg" />
+    <Content Include="Resources\Images\vaybody2.jpg" />
+    <Content Include="Resources\Images\vaybody3.jpg" />
+    <Content Include="Resources\Images\vayxoe1.jpg" />
+    <Content Include="Resources\Images\vayxoe2.jpg" />
+    <Content Include="Resources\Images\yVwath_simg_ad6a59_806-806-0-0_cropf.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.1" NoWarn="NU1605" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.1" NoWarn="NU1605" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.2" />

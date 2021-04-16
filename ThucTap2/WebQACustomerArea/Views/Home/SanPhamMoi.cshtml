@@ -1,8 +1,10 @@
 ﻿@using WebQACustomerArea.Models;
 @using PagedList.Mvc;
 @model PagedList.PagedList<Product>
-
-@Html.Action("dau", "Home")
+@{
+    ViewBag.Title = "Sản phẩm mới";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <!--
 Sanphammoi
   -->
@@ -20,7 +22,7 @@ Sanphammoi
                                 <div class="thumbnail">
                                     <a class="zoomTool" href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"><span class="icon-search"></span> Xem ngay</a>
                                     <a href="#" class="tag"></a>
-                                    <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"><img src="@Url.Content("~/Images/"+item.Product_Image)" /></a>
+                                    <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"><img src="@Url.Content("~/"+item.Product_Image)" /></a>
                                     <p style="margin-top:8px">@item.Product_Show</p>
                                     <p> <b>@item.Product_Price VNĐ</b></p>
 
@@ -35,6 +37,4 @@ Sanphammoi
 
         </div>
     </div>
-    @Html.Action("cuoi", "Home")
-    @*Tạo link liên kết các trang*@
-    </div>
+</div>

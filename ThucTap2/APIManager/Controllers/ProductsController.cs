@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebQA.Application.ViewModels;
 using WebsiteData.Data.Context;
 using WebsiteData.Entities;
 
@@ -21,10 +22,25 @@ namespace APIManager.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        public async Task<ActionResult<IEnumerable<ProductViewModel>>> GetProducts()
         {
-            var a = await _context.Products.Include(c => c.Category).Include(o => o.OrderDetails).ToListAsync();
-            return a;
+            var a = from pd in _context.Products
+                    join ct in _context.Categories on pd.Category_Id equals ct.Category_Id
+                    select new ProductViewModel
+                    {
+                        Product_Id = pd.Product_Id,
+                        Product_Name = pd.Product_Name,
+                        Product_Style = pd.Product_Style,
+                        Product_Size = pd.Product_Size,
+                        Product_Image = pd.Product_Image,
+                        Product_Show = pd.Product_Show,
+                        Product_Price = pd.Product_Price,
+                        Product_Quantity = pd.Product_Quantity,
+                        Product_Note = pd.Product_Note,
+                        Category_Id = ct.Category_Id,
+                        Category_Name = ct.Category_Name,
+                    };
+            return await a.ToListAsync();
         }
 
         // GET: api/Products/5

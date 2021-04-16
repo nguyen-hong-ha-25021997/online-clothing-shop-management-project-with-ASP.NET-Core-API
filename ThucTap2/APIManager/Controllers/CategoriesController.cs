@@ -24,8 +24,14 @@ namespace APIManager.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
-            var a = await _context.Categories.Include(c => c.Products).ToListAsync();
-            return  a;
+            var a = from ct in _context.Categories
+                    select new Category
+                    {
+                        Category_Id = ct.Category_Id,
+                        Category_Name = ct.Category_Name,
+                        Category_Quantity = ct.Category_Quantity
+                    };
+            return await a.ToListAsync();
         }
 
         // GET: api/Categories/5
@@ -64,7 +70,8 @@ namespace APIManager.Controllers
 
             try
             {
-                await _context.SaveChangesAsync();
+                var rs = await _context.SaveChangesAsync();
+                return Ok(rs);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -77,8 +84,6 @@ namespace APIManager.Controllers
                     throw;
                 }
             }
-
-            return NoContent();
         }
 
         // POST: api/Categories
@@ -88,8 +93,8 @@ namespace APIManager.Controllers
         public async Task<ActionResult<Category>> PostCategory(Category category)
         {
             _context.Categories.Add(category);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction("GetCategory", new { id = category.Category_Id }, category);
+            var rs = await _context.SaveChangesAsync();
+            return Ok(rs);
         }
 
         // DELETE: api/Categories/5
@@ -103,9 +108,9 @@ namespace APIManager.Controllers
             }
 
             _context.Categories.Remove(category);
-            await _context.SaveChangesAsync();
+            var rs = await _context.SaveChangesAsync();
 
-            return category;
+            return Ok(rs);
         }
 
         private bool CategoryExists(int id)

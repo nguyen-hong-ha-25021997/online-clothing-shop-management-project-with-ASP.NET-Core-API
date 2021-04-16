@@ -35,7 +35,7 @@ namespace WebQACustomerArea.Controllers
         public PartialViewResult SanPhamSales(int? page)
         {
             //Tạo số sản phẩm của trang
-            int pageSize = 3;
+            int pageSize = 4;
             //tao so trang
             int pageNumber = (page ?? 1);//nesu khong du 8 san pham thi mac dinh la 1 trang
             return PartialView(db.Products.Where(n => n.Product_Note == "Sales").ToList().OrderBy(n => n.Product_Price).ToPagedList(pageNumber, pageSize));
@@ -53,6 +53,15 @@ namespace WebQACustomerArea.Controllers
         }
         public PartialViewResult DanhMuc()
         {
+            //var rs = from ct in db.Categories
+            //         select new CategoryViewModel
+            //         {
+            //             Category_Id = ct.Category_Id,
+            //             Category_Name = ct.Category_Name,
+            //             Category_Quantity = ct.Category_Quantity
+            //         };
+
+            //return PartialView(rs.ToList());
             return PartialView(db.Categories.ToList());
         }
         //chi tiet

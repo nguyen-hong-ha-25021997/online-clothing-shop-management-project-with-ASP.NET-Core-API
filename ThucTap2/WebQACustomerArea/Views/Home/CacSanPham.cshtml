@@ -1,7 +1,10 @@
 ﻿@using WebQACustomerArea.Models
 @using PagedList.Mvc
 @model PagedList.PagedList<Product>
-@Html.Action("dau", "Home")
+@{
+    ViewBag.Title = "Các sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <div class="well well-small">
     <p><h3>Các sản phẩm </h3></p>
     <hr class="soften" />
@@ -17,7 +20,7 @@
                                     <a class="zoomTool" href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})" title="add to cart"><span class="icon-search"></span> Xem ngay</a>
                                     <a href="#" class="tag"></a>
                                     <a href="#"></a>
-                                    <a href="@Url.Action("XemChiTietSanPham", "Home", new { @MaSanPham  = item.Product_Id})"><img src="@Url.Content("~/Images/"+item.Product_Image)" /></a>
+                                    <a href="@Url.Action("XemChiTietSanPham", "Home", new { @MaSanPham  = item.Product_Id})"><img src="@Url.Content("~/"+item.Product_Image)" /></a>
                                     <p>@item.Product_Show</p>
                                     <p> <b>@item.Product_Price</b></p>
 
@@ -32,4 +35,3 @@
         </div>
     </div>
 </div>
-@Html.Action("cuoi", "Home")
