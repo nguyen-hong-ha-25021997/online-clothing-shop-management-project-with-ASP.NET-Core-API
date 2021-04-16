@@ -6537,23 +6537,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ha\\.nuget\\packages\\": {},
+    "C:\\Users\\Huy_Cute\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
+      "projectUniqueName": "C:\\Users\\Huy_Cute\\Desktop\\HaNqu\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
       "projectName": "WebsiteData",
-      "projectPath": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
-      "packagesPath": "C:\\Users\\Ha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\obj\\",
+      "projectPath": "C:\\Users\\Huy_Cute\\Desktop\\HaNqu\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
+      "packagesPath": "C:\\Users\\Huy_Cute\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Huy_Cute\\Desktop\\HaNqu\\ThucTap2\\WebsiteData\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Huy_Cute\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6635,7 +6635,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

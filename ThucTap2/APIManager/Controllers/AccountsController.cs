@@ -159,6 +159,7 @@ namespace APIManager.Controllers
             return _context.Accounts.Any(e => e.Id == id);
         }
 
+
         [HttpPost]
         [Route("Login")]
         public async Task<IActionResult> Login(LoginViewModel login)
@@ -208,6 +209,28 @@ namespace APIManager.Controllers
             }
             else
                 return BadRequest(new { message = "Username or password is incorrect." });
+        }
+        [HttpGet("GetPurchaseYears")]
+        public async Task<IActionResult> GetYears()
+        {
+            var Years = new List<int>();
+            var query = await _context.Orders.GroupBy(x => x.Order_PurchaseTime.Value.Year).ToListAsync();
+            foreach (var item in query)
+            {
+                Years.Add(item.Key);
+            }
+            return Ok(Years);
+        }
+      [HttpGet("GetPurchaseTMonths")]
+        public async Task<IActionResult> GetAddKHMonths()
+        {
+            var Months = new List<int>();
+            var query = await _context.Orders.GroupBy(x => x.Order_PurchaseTime.Value.Month).ToListAsync();
+            foreach (var item in query)
+            {
+                Months.Add(item.Key);
+            }
+            return Ok(Months);
         }
     }
 }
