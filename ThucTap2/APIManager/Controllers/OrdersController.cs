@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using APIManager.Hepler;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WebsiteData.Data.Context;
 using WebsiteData.Entities;
+using Microsoft.EntityFrameworkCore;
+using APIManager.Extentions;
 
 namespace APIManager.Controllers
 {
@@ -27,6 +29,145 @@ namespace APIManager.Controllers
         {
             var a = await _context.Orders.Include(o => o.OrderDetails).ToListAsync();
             return a;
+        }
+
+        [HttpGet("GetAllPaging")]
+        public async Task<ActionResult> GetAllPagingAsync([FromQuery] PagingParams pagingParams)
+        {
+            var query = from od in _context.Orders
+                        //join acc in _context.Accounts on od.Account_Id equals acc.Id into accGr
+                        //from acc in accGr.DefaultIfEmpty()
+                        orderby od.Order_PurchaseTime descending
+                        select new Order
+                        {
+                            Order_Id = od.Order_Id,
+                            //Account_Id = accGr == null ? 0 : acc.Id,
+                            CustomerName = od.CustomerName,
+                            CustomerAddress = od.CustomerAddress,
+                            CustomerEmail = od.CustomerEmail,
+                            CustomerMobile = od.CustomerMobile,
+                            Order_Amount = od.Order_Amount,
+                            Order_Status = od.Order_Status,
+                            Order_PurchaseTime = od.Order_PurchaseTime,
+                        };
+            if (!string.IsNullOrEmpty(pagingParams.fromDate) && !string.IsNullOrEmpty(pagingParams.toDate))
+            {
+                DateTime fromDate = DateTime.Parse(pagingParams.fromDate);
+                DateTime toDate = DateTime.Parse(pagingParams.toDate);
+                query = query.Where(x => (x.Order_PurchaseTime) >= fromDate.Date && (x.Order_PurchaseTime) < toDate.Date.AddDays(1));
+            }
+            if (!string.IsNullOrEmpty(pagingParams.Keyword))
+            {
+                var keyword = pagingParams.Keyword.ToUpper().ToTrim();
+
+                query = query.Where(x =>
+                                        (x.CustomerName ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) ||
+                                        (x.CustomerName ?? string.Empty).ToUpper().Contains(keyword) ||
+                                        (x.CustomerEmail ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) ||
+                                        (x.CustomerEmail ?? string.Empty).ToUpper().Contains(keyword) ||
+                                        (x.CustomerAddress ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) ||
+                                        (x.CustomerAddress ?? string.Empty).ToUpper().Contains(keyword) ||
+                                        (x.CustomerMobile ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) ||
+                                        (x.CustomerMobile ?? string.Empty).ToUpper().Contains(keyword) ||
+
+                                    // Lọc số
+
+                                    (x.Order_Amount.ToString("0.00").Contains(keyword))
+                                    );
+
+            }
+            if (!string.IsNullOrEmpty(pagingParams.KeywordCol))
+            {
+                var keyword = pagingParams.KeywordCol.ToUpper().ToTrim();
+                if (pagingParams.ColName == "Order_PurchaseTime")
+                {
+                    query = query.Where(x => (x.Order_PurchaseTime.ToString("dd/MM/yyyy").Contains(keyword)));
+
+                }
+                if (pagingParams.ColName == "CustomerName")
+                {
+                    query = query.Where(x => (x.CustomerName ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) || (x.CustomerName ?? string.Empty).ToUpper().Contains(keyword));
+                }
+                if (pagingParams.ColName == "CustomerAddress")
+                {
+                    query = query.Where(x => (x.CustomerAddress ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) || (x.CustomerAddress ?? string.Empty).ToUpper().Contains(keyword));
+                }
+                if (pagingParams.ColName == "CustomerEmail")
+                {
+                    query = query.Where(x => (x.CustomerEmail ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) || (x.CustomerEmail ?? string.Empty).ToUpper().Contains(keyword));
+                }
+                if (pagingParams.ColName == "CustomerMobile")
+                {
+                    query = query.Where(x => (x.CustomerMobile ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) || (x.CustomerMobile ?? string.Empty).ToUpper().Contains(keyword));
+                }
+                if (pagingParams.ColName == "Order_Amount")
+                {
+                    query = query.Where(x => (x.Order_Amount.ToString().Contains(keyword)));
+
+                }
+            }
+            if (!string.IsNullOrEmpty(pagingParams.SortKey))
+            {
+                if (pagingParams.SortKey == "CustomerName" && pagingParams.SortValue == "ascend")
+                {
+                    query = query.OrderBy(x => x.CustomerName);
+                }
+                if (pagingParams.SortKey == "CustomerName" && pagingParams.SortValue == "descend")
+                {
+                    query = query.OrderByDescending(x => x.CustomerName);
+                }
+
+                if (pagingParams.SortKey == "CustomerAddress" && pagingParams.SortValue == "ascend")
+                {
+                    query = query.OrderBy(x => x.CustomerAddress);
+                }
+                if (pagingParams.SortKey == "CustomerAddress" && pagingParams.SortValue == "descend")
+                {
+                    query = query.OrderByDescending(x => x.CustomerAddress);
+                }
+
+                if (pagingParams.SortKey == "CustomerEmail" && pagingParams.SortValue == "ascend")
+                {
+                    query = query.OrderBy(x => x.CustomerEmail);
+                }
+                if (pagingParams.SortKey == "CustomerEmail" && pagingParams.SortValue == "descend")
+                {
+                    query = query.OrderByDescending(x => x.CustomerEmail);
+                }
+
+                if (pagingParams.SortKey == "CustomerMobile" && pagingParams.SortValue == "ascend")
+                {
+                    query = query.OrderBy(x => x.CustomerMobile);
+                }
+                if (pagingParams.SortKey == "CustomerMobile" && pagingParams.SortValue == "descend")
+                {
+                    query = query.OrderByDescending(x => x.CustomerMobile);
+                }
+
+                if (pagingParams.SortKey == "Order_Amount" && pagingParams.SortValue == "ascend")
+                {
+                    query = query.OrderBy(x => x.Order_Amount);
+                }
+                if (pagingParams.SortKey == "Order_Amount" && pagingParams.SortValue == "descend")
+                {
+                    query = query.OrderByDescending(x => x.Order_Amount);
+                }
+                if (pagingParams.SortKey == "Order_PurchaseTime" && pagingParams.SortValue == "ascend")
+                {
+                    query = query.OrderBy(x => x.Order_PurchaseTime);
+                }
+                if (pagingParams.SortKey == "Order_PurchaseTime" && pagingParams.SortValue == "descend")
+                {
+                    query = query.OrderByDescending(x => x.Order_PurchaseTime);
+                }
+            }
+            if (pagingParams.PageSize == -1)
+            {
+                pagingParams.PageSize = await query.CountAsync();
+            }
+            var paged = await PagedList<Order>.CreateAsync(query, pagingParams.PageNumber, pagingParams.PageSize);
+            Response.AddPagination(paged.CurrentPage, paged.PageSize, paged.TotalCount, paged.TotalPages);
+            return Ok(new { paged.Items, paged.CurrentPage, paged.PageSize, paged.TotalCount, paged.TotalPages });
         }
 
         // GET: api/Orders/5

@@ -5,7 +5,6 @@ namespace WebsiteData.Entities
     public class OrderDetail
     {
         public int OrderDetail_Id { get; set; }
-
         public int? Order_Id { get; set; }
         public Order Order { get; set; }
 
@@ -14,7 +13,6 @@ namespace WebsiteData.Entities
 
         public int OrderDetail_Quantity { get; set; }
         public int OrderDetail_Amount { get; set; }
-        
-        
+       
     }
 }

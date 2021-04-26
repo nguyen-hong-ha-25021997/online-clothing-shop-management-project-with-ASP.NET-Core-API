@@ -71,7 +71,8 @@ namespace APIManager.Controllers
 
             try
             {
-                await _context.SaveChangesAsync();
+                var rs = await _context.SaveChangesAsync();
+                return Ok(rs);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -84,8 +85,6 @@ namespace APIManager.Controllers
                     throw;
                 }
             }
-
-            return NoContent();
         }
 
         // POST: api/Products
@@ -94,9 +93,8 @@ namespace APIManager.Controllers
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
             _context.Products.Add(product);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetProduct", new { id = product.Product_Id }, product);
+            var rs = await _context.SaveChangesAsync();
+            return Ok(rs);
         }
 
         // DELETE: api/Products/5
@@ -110,9 +108,9 @@ namespace APIManager.Controllers
             }
 
             _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
+            var rs = await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(rs);
         }
 
         private bool ProductExists(int id)

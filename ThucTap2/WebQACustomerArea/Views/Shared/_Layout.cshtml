@@ -55,12 +55,12 @@
                                         <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Ao"})">Áo</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown" style="width: 120px">
+                                @*<li class="dropdown" style="width: 120px">
                                     <a href="@Url.Action("DangNhap","KhachHang")">Đăng nhập</a>
                                     <ul style="width:150px" class="dropdown-content">
                                         <li><a href="@Url.Action("DangKi","KhachHang")">Đăng kí</a></li>
                                     </ul>
-                                </li>
+                                </li>*@
                                 <li class="">
                                     <span><a style="float: left; padding: 5px 5px 10px; border: 0;" href="@Url.Action("GioHang","GioHang")"><img style="width:25px; height:25px" src="~/Images/giohang.jpg" /></a></span>
                                     <span style="float:right;margin-left:5px;margin-top:10px"><a style="color: #000; text-decoration:none" href="@Url.Action("GioHang","GioHang")">@Html.Action("TongTien", "giohang")  đ </a></span>

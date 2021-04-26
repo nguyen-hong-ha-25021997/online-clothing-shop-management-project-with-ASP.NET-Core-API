@@ -30,7 +30,7 @@ namespace APIManager.Controllers
                     {
                         file.CopyTo(stream);
                     }
-                    string targetPath = @"C:\Users\Ha\Desktop\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\Resources\Images";
+                    string targetPath = @"C:\Users\Ha\Desktop\online-clothing-shop\WebQACustomerArea\Resources\Images";
                     string destFile = System.IO.Path.Combine(targetPath, fileName);
                     Directory.CreateDirectory(targetPath);
                     System.IO.File.Copy(fullPath, destFile, true);

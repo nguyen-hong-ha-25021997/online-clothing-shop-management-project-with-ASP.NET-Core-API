@@ -24,14 +24,21 @@ namespace APIManager.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
-            var a = from ct in _context.Categories
-                    select new Category
-                    {
-                        Category_Id = ct.Category_Id,
-                        Category_Name = ct.Category_Name,
-                        Category_Quantity = ct.Category_Quantity
-                    };
-            return await a.ToListAsync();
+            //var a = from ct in _context.Categories
+            //        select new Category
+            //        {
+            //            Category_Id = ct.Category_Id,
+            //            Category_Name = ct.Category_Name,
+            //            //Category_Quantity = .Sum(x => x.Product_Quantity)
+            //        };
+            //return await a.ToListAsync();
+            var categoties = _context.Categories.ToList();
+            foreach(var category in categoties)
+            {
+                var products = _context.Products.Where(x => x.Category_Id == category.Category_Id).ToList();
+                category.Category_Quantity = products.Sum(x => x.Product_Quantity);
+            }
+            return categoties.ToList();
         }
 
         // GET: api/Categories/5
