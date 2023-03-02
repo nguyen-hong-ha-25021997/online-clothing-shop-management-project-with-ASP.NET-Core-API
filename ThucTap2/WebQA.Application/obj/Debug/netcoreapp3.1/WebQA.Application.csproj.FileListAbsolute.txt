@@ -1,0 +1,26 @@
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebQA.Application.deps.json
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebQA.Application.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebQA.Application.pdb
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebsiteData.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebsiteData.pdb
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.csproj.AssemblyReference.cache
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.AssemblyInfoInputs.cache
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.AssemblyInfo.cs
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.csproj.CoreCompileInputs.cache
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.csproj.CopyComplete
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.pdb
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebQA.Application.deps.json
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebQA.Application.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebQA.Application.pdb
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebsiteData.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\bin\Debug\netcoreapp3.1\WebsiteData.pdb
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.csproj.AssemblyReference.cache
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.AssemblyInfoInputs.cache
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.AssemblyInfo.cs
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.csproj.CoreCompileInputs.cache
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.csproj.CopyComplete
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQA.Application\obj\Debug\netcoreapp3.1\WebQA.Application.pdb

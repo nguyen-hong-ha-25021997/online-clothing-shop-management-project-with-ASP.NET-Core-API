@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\WebQA.Application.csproj": {}
+    "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\WebQA.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\WebQA.Application.csproj": {
+    "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\WebQA.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\WebQA.Application.csproj",
+        "projectUniqueName": "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\WebQA.Application.csproj",
         "projectName": "WebQA.Application",
-        "projectPath": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\WebQA.Application.csproj",
-        "packagesPath": "C:\\Users\\Ha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\obj\\",
+        "projectPath": "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\WebQA.Application.csproj",
+        "packagesPath": "C:\\Users\\bhlon\\.nuget\\packages\\",
+        "outputPath": "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebQA.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bhlon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj": {
-                "projectPath": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj"
+              "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj": {
+                "projectPath": "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj"
               }
             }
           }
@@ -52,7 +52,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,24 +62,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj": {
+    "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
+        "projectUniqueName": "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
         "projectName": "WebsiteData",
-        "projectPath": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
-        "packagesPath": "C:\\Users\\Ha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\obj\\",
+        "projectPath": "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
+        "packagesPath": "C:\\Users\\bhlon\\.nuget\\packages\\",
+        "outputPath": "D:\\Ha-Start\\Phan mem ca nhan\\Code\\shop_quan_ap\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bhlon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -151,7 +152,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -160,7 +162,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

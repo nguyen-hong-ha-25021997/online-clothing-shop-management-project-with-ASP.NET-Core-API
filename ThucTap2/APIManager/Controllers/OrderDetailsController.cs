@@ -64,7 +64,7 @@ namespace APIManager.Controllers
                             Product_Price = pd.Product_Price,
                             OrderDetail_Quantity = odt.OrderDetail_Quantity,
                             OrderDetail_Amount = odt.OrderDetail_Amount,
-                            Order_PurchaseTime = od.Order_PurchaseTime,
+                            Order_PurchaseTime = od.Order_PurchaseTime ?? DateTime.Now,
                         };
             if (!string.IsNullOrEmpty(pagingParams.fromDate) && !string.IsNullOrEmpty(pagingParams.toDate))
             {

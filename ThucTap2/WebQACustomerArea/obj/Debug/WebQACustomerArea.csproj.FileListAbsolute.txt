@@ -1,0 +1,72 @@
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\WebQACustomerArea.dll.config
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\WebQACustomerArea.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\WebQACustomerArea.pdb
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Antlr3.Runtime.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\EntityFramework.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\EntityFramework.SqlServer.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Microsoft.Web.Infrastructure.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Newtonsoft.Json.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\PagedList.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\PagedList.Mvc.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Helpers.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Mvc.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Optimization.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Razor.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.Deployment.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.Razor.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\WebGrease.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\EntityFramework.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\EntityFramework.SqlServer.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\PagedList.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\PagedList.Mvc.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Mvc.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Helpers.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Optimization.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Razor.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.Deployment.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.Razor.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Newtonsoft.Json.xml
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Antlr3.Runtime.pdb
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.csproj.AssemblyReference.cache
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.csproj.CoreCompileInputs.cache
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.csproj.CopyComplete
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.dll
+D:\Ha-Start\Phan_mem_ca_nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.pdb
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\WebQACustomerArea.dll.config
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\WebQACustomerArea.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\WebQACustomerArea.pdb
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Antlr3.Runtime.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\EntityFramework.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\EntityFramework.SqlServer.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Microsoft.Web.Infrastructure.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Newtonsoft.Json.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\PagedList.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\PagedList.Mvc.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Helpers.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Mvc.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Optimization.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Razor.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.Deployment.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.Razor.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\WebGrease.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Antlr3.Runtime.pdb
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\EntityFramework.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\EntityFramework.SqlServer.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\Newtonsoft.Json.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\PagedList.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\PagedList.Mvc.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Helpers.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Mvc.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Optimization.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.Razor.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.Deployment.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\bin\System.Web.WebPages.Razor.xml
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.csproj.AssemblyReference.cache
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.csproj.CoreCompileInputs.cache
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.csproj.CopyComplete
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.dll
+D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.pdb
