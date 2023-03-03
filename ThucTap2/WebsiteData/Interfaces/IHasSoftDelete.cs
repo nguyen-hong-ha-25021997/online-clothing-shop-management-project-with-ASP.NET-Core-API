@@ -7,5 +7,6 @@ namespace WebsiteData.Interfaces
     public interface IHasSoftDelete
     {
         bool IsDeleted { get; set; }
+
     }
 }
