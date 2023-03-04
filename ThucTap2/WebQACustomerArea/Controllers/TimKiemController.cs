@@ -25,7 +25,7 @@ namespace WebQACustomerArea.Controllers
             List<Product> listkq = db.Products.Where(n => n.Product_Name.Contains(tukhoa) || n.Product_Show.Contains(tukhoa) || n.Product_Price.ToString().Contains(tukhoa) || n.Product_Style.Contains(tukhoa)).ToList();
 
 
-            int pageSize = 4;
+            int pageSize = 12;
             int pageNumber = (page ?? 1);
             if (listkq.Count == 0)
             {
@@ -44,7 +44,7 @@ namespace WebQACustomerArea.Controllers
             List<Product> listkq = db.Products.Where(n => n.Product_Name.Contains(tukhoa) || n.Product_Show.Contains(tukhoa) || n.Product_Price.ToString().Contains(tukhoa) || n.Product_Style.Contains(tukhoa)).ToList();
             ViewBag.TuKhoa = tukhoa;
 
-            int pageSize = 4;
+            int pageSize = 12;
             int pageNumber = (page ?? 1);
             if (listkq.Count == 0)
             {

@@ -5,136 +5,151 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>@ViewBag.Title</title>
+    @*<link href="~/assets/css/bootstrap.css" rel="stylesheet" />*@
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    @*<link href="~/Content/userCss.css" rel="stylesheet" />*@
+    @*<link href="~/Content/fontmin.css" rel="stylesheet" />*@
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    @*<link href="~/Content/font.css" rel="stylesheet" />*@
+    <link href="~/assets/img/K1-store-dhhp-1.png" rel="shortcut icon" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <link href="~/Content/bootstrapa.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/userCss.css" rel="stylesheet" />
-    <link href="~/Content/fontmin.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Style.css" rel="stylesheet" />
-    <link href="~/Content/font.css" rel="stylesheet" />
-    <link href="~/favicon.ico" rel="shortcut icon" />
+<body style="background-color:aliceblue">
+    <header class="">
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="topNav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <div class="container">
-                <div class="alignR"></div>
-            </div>
-        </div>
-    </div>
-    <!--
-    MenuTrangChu
-     -->
-    <div class="container">
-        <div class="row" style="margin-bottom: 5%">
-            <div class="logo" style="margin-left: 4%">
-                <img src="~/Images/images-logo-4Teen.png" />
-            </div>
-            <!--
-            Menu Trang Chu
-            -->
-            <div class="navbar" style="float: right; width: 70%">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <div class="nav-collapse">
-                            <ul class="nav" style="width: 100%">
-                                <li class=""><a class="" href="@Url.Action("TrangChu","Home")">Trang chủ</a></li>
-                                <li class="dropdown">
-                                    <a href="@Url.Action("SanPhamMoi","Home")">Sản phẩm</a>
-                                    <ul class="dropdown-content" style="width: 90px">
-                                        <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Vay"})">Váy</a></li>
-                                        <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Quan"})">Quần</a></li>
-                                        <li><a href="@Url.Action("CacSanPham", "Home", new { @type = "Ao"})">Áo</a></li>
-                                    </ul>
-                                </li>
-                                @*<li class="dropdown" style="width: 120px">
-                                    <a href="@Url.Action("DangNhap","KhachHang")">Đăng nhập</a>
-                                    <ul style="width:150px" class="dropdown-content">
-                                        <li><a href="@Url.Action("DangKi","KhachHang")">Đăng kí</a></li>
-                                    </ul>
-                                </li>*@
-                                <li class="">
-                                    <span><a style="float: left; padding: 5px 5px 10px; border: 0;" href="@Url.Action("GioHang","GioHang")"><img style="width:25px; height:25px" src="~/Images/giohang.jpg" /></a></span>
-                                    <span style="float:right;margin-left:5px;margin-top:10px"><a style="color: #000; text-decoration:none" href="@Url.Action("GioHang","GioHang")">@Html.Action("TongTien", "giohang")  đ </a></span>
-                                    <span style="float:right;margin-top:10px"><a style="color: #000; text-decoration:none" href="@Url.Action("GioHang","GioHang")">  -  @Html.Action("TongSL", "giohang")  -  </a></span>
-                                </li>
-                                <li class="" style="padding-top:8px; float:right">
-                                    @using (Html.BeginForm("KetQuaTimKiem", "TimKiem", FormMethod.Post))
-                                    {
-                                        @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "search-query span2", @placeholder = "Tìm kiếm" })
-
-                                        <button type="submit"><img src="~/Images/1473536510_Search.png" /></button>
-                                    }
-                                </li>
+                <a class="navbar-brand" href="#">
+                    <img src="~/assets/img/K1-store-dhhp-1.png" alt="" width="50" height="50" class="d-inline-block align-text-top rounded rounded-circle">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="@Url.Action("TrangChu","Home")">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Loại sản phẩm
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                @Html.Action("DanhMuc", "Home")
                             </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sản phẩm
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="@Url.Action("CacSanPham", "Home", new { @type = "Vay"})">Váy</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("CacSanPham", "Home", new { @type = "Quan"})">Quần</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("CacSanPham", "Home", new { @type = "Ao"})">Áo</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("SanPhamMoi","Home")">Sản phẩm mới</a>
+                        </li>
+                    </ul>
+
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <span style="float:right;margin-left:5px;margin-top:10px"><a style="color: white; text-decoration:none" href="@Url.Action("GioHang","GioHang")">@Html.Action("TongTien", "giohang")  đ </a></span>
+                            <a href="@Url.Action("GioHang","GioHang")" class="btn btn-success position-relative ms-1">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    @Html.Action("TongSL", "giohang")
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
                         </div>
-                    </div>
+                    </nav>
+
+                    @using (Html.BeginForm("KetQuaTimKiem", "TimKiem", FormMethod.Post, htmlAttributes: new { @class = "d-flex" }))
+                    {
+                        @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "form-control me-2", @placeholder = "Tìm kiếm" })
+
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    }
                 </div>
             </div>
-        </div>
-        <div class="slideshow-container" style=" margin-left: 7%; margin-bottom:5%">
-            <div class="mySlides fade" style="opacity: 1;">
-                <img style="width:100%;" src="~/Images/sb_1489472704_306.jpg" />
-
+        </nav>
+        <img class="img-fluid w-100" src="~/Images/sb_1489472704_306.jpg" />
+        @*<div class="mySlides fade" style="opacity: 1;">
+                <img class="img-fluid" src="~/Images/sb_1490596751_719.jpg" />
             </div>
             <div class="mySlides fade" style="opacity: 1;">
-                <img style="width: 100%" src="~/Images/sb_1490596751_719.jpg" />
+                <img class="img-fluid" src="~/Images/sb_1489483560_462 (1).jpg" />
+            </div>*@
+    </header>
 
-            </div>
-            <div class="mySlides fade" style="opacity: 1;">
-
-                <img style="width: 100%" src="~/Images/sb_1489483560_462 (1).jpg" />
-            </div>
-        </div>
+    <main class="mb-5">
         <!--
         Body Section
             DanhMuc ben trai
         -->
-        <div class="row">
-            <div id="sidebar" class="span3" style="margin-left:7%">
-                <div class="well well-small1">
-                    <ul class="nav nav-list">
-                        @Html.Action("DanhMuc", "Home")
-                    </ul>
+        @RenderBody()
+    </main>
+    <footer>
+                <div style="background-color:#c1c1c1; margin-right:0" class="ps-5 row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top">
+                    <div class="col mb-3">
+                        <img src="~/assets/img/K1-store-dhhp-1.png" class="d-inline-block rounded rounded-circle" width="100" height="100" />
+                    </div>
+
+                    <div class="col mb-3">
+
+                    </div>
+
+                    <div class="col mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        </ul>
+                    </div>
+                </div>
+        <div class=" mt-5 fixed-bottom bg-primary text-light pe-5">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 ">©copyright by Tien</span>
                 </div>
 
-                <!--
-                Sanphambanchay
-                  -->
-
-                <a class="shopBtn btn-block" href="@Url.Action("SanPhamBanChay","Home")">Sản phẩm bán chạy<br><small>NHẤP ĐỂ XEM</small></a>
-            </div>
-            <div id="khung" style="margin-right:5%">
-                @RenderBody()
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-light" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="ms-3"><a class="text-light" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="ms-3"><a class="text-light" href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                </ul>
             </div>
         </div>
-        <footer class="footer" style="padding:20px">
-            <div>
-                <i>
-                    HOTLINE: 079.325.3797
-                    Hệ thống 4Teen tại Hải Phòng<br />
-                    14 – 16 Mê Linh, Hải Phòng<br />
-
-                    14 Phạm Minh Đức, Hải Phòng<br /><br />
-                </i>
-            </div>
-            <div>
-                <i>
-                    VỀ CHÚNG TÔI<br />
-                    4Teen - Thương hiệu thời trang nữ hàng đầu dành cho giới trẻ.
-                </i>
-            </div>
-        </footer>
-    </div>
-
+    </footer>
+    
     <script>
         var slideIndex = 0;
         showSlides();
@@ -152,11 +167,11 @@
         }
     </script>
     <script src="~/Scripts/jquery.js"></script>
-    <script src="~/Scripts/bootstrap.minb.js"></script>
-
+    <script src="~/assets/js/bootstrap.bundle.js"></script>
     <script src="~/Scripts/jquery.easing-1.3.min.js"></script>
     <script src="~/Scripts/jquery.scrollTo-1.4.3.1-min.js"></script>
     <script src="~/Scripts/shop.js"></script>
+    <script src="https://kit.fontawesome.com/59a9964709.js" crossorigin="anonymous"></script>
 
     @RenderSection("footerJS", required: false)
 </body>

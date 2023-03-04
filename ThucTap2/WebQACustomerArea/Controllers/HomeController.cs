@@ -22,10 +22,14 @@ namespace WebQACustomerArea.Controllers
         public PartialViewResult SanPhamBanChay(int? page)
         {
             //Tạo số sản phẩm của trang
-            int pageSize = 4;
+            int pageSize = 12;
             //tao so trang
             int pageNumber = (page ?? 1);//nesu khong du 8 san pham thi mac dinh la 1 trang
-            return PartialView(db.Products.Where(n => n.Product_Note == "Bán Chạy").ToList().OrderBy(n => n.Product_Price).ToPagedList(pageNumber, pageSize));
+            return PartialView(db.Products.Where(n => (n.Product_Note == "Bán Chạy" || n.Product_Note == "Bán rất chạy")).ToList().OrderBy(n => n.Product_Price).ToPagedList(pageNumber, pageSize));
+        }
+        public PartialViewResult SanPhamBanChayShow()
+        {
+            return PartialView(db.Products.Where(n => (n.Product_Note == "Bán chạy" || n.Product_Note == "Bán rất chạy")).Take(4).ToList());
         }
         //san pham sales
         public PartialViewResult SanPhamSalesShow()
@@ -35,7 +39,7 @@ namespace WebQACustomerArea.Controllers
         public PartialViewResult SanPhamSales(int? page)
         {
             //Tạo số sản phẩm của trang
-            int pageSize = 4;
+            int pageSize = 12;
             //tao so trang
             int pageNumber = (page ?? 1);//nesu khong du 8 san pham thi mac dinh la 1 trang
             return PartialView(db.Products.Where(n => n.Product_Note == "Sales").ToList().OrderBy(n => n.Product_Price).ToPagedList(pageNumber, pageSize));
@@ -46,7 +50,7 @@ namespace WebQACustomerArea.Controllers
         public PartialViewResult SanPhamMoi(int? page)
         {
             //Tạo số sản phẩm của trang
-            int pageSize = 7;
+            int pageSize = 12;
             //tao so trang
             int pageNumber = (page ?? 1);//nesu khong du 8 san pham thi mac dinh la 1 trang
             return PartialView(db.Products.Where(n => n.Product_Note == "Mới").ToList().OrderBy(n => n.Product_Price).ToPagedList(pageNumber, pageSize));

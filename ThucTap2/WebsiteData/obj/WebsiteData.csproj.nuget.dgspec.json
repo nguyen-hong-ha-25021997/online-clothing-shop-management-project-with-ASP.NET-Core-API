@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj": {}
+    "D:\\GitBash\\Project\\ShopOnline\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj": {
+    "D:\\GitBash\\Project\\ShopOnline\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
+        "projectUniqueName": "D:\\GitBash\\Project\\ShopOnline\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
         "projectName": "WebsiteData",
-        "projectPath": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
-        "packagesPath": "C:\\Users\\Ha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ha\\Desktop\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\obj\\",
+        "projectPath": "D:\\GitBash\\Project\\ShopOnline\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\WebsiteData.csproj",
+        "packagesPath": "C:\\Users\\vutie\\.nuget\\packages\\",
+        "outputPath": "D:\\GitBash\\Project\\ShopOnline\\online-clothing-shop-management-project-with-ASP.NET-Core-API\\ThucTap2\\WebsiteData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vutie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

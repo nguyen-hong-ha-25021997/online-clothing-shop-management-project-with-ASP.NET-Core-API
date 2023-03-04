@@ -1,26 +1,33 @@
 ﻿@using WebQACustomerArea.Models;
 @model List<Product>
 
-
-<div class="carousel-inner">
-    <div class="item active">
-        <ul class="thumbnails">
+<div class="px-5 card container shadow " style="background: rgb(245,234,234); background: linear-gradient(90deg, rgba(245,234,234,1) 0%, rgba(73,90,252,1) 50%, rgba(234,255,228,1) 100%); ">
+    <h1 class="text-center pt-3 text-light">Sản phẩm giảm giá</h1>
+    <div class="row-fluid">
+        <div id="newProductCar" class="carousel slide row">
             @foreach (var item in Model)
             {
-                <li class="span3">
-                    <div class="thumbnail">
-                        <a class="zoomTool" href="@Url.Action("XemChiTietSanPham", "Home", new { @MaSanPham = item.Product_Id})" title="add to cart"><span class="icon-search"></span> Xem ngay</a>
-
-                        <a href="#" class="tag"></a>
-                        <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"><img src="@Url.Content("~/"+item.Product_Image)" /></a>
-                        <p style="margin-top:7px">@item.Product_Show</p>
-                        <p> <b>@item.Product_Price VNĐ</b></p>
-
+                var value = String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", @item.Product_Price);
+                <div class=" col-md-3 mx-auto px-3 pb-5">
+                    <div class="card m-2 shadowPro">
+                        <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"></a>
+                        <img src="@Url.Content("~/Images/"+item.Product_Image)" class="card-img-top" alt="@Url.Content(item.Product_Image + item.Product_Style)">
+                        <div class="card-body">
+                            <h4 class="card-title">Giá: <span class="text-danger">@value</span></h4>
+                            <h6 class="">Mã: @item.Product_Show</h6>
+                            <p class="card-text">Products description.</p>
+                            <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Xem chi tiết</a>
+                        </div>
                     </div>
-                </li>
+
+                </div>
+
             }
-        </ul>
+
+        </div>
     </div>
+    <h3><a style="float:right" href="@Url.Action("SanPhamSales","Home")" title="View more">Xem Thêm</a> </h3>
 </div>
+
 
 

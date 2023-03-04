@@ -200,17 +200,36 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bootstrap-grid.css" />
+    <Content Include="assets\css\bootstrap-grid.min.css" />
+    <Content Include="assets\css\bootstrap-grid.rtl.css" />
+    <Content Include="assets\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="assets\css\bootstrap-reboot.css" />
+    <Content Include="assets\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\css\bootstrap-reboot.rtl.css" />
+    <Content Include="assets\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="assets\css\bootstrap-utilities.css" />
+    <Content Include="assets\css\bootstrap-utilities.min.css" />
+    <Content Include="assets\css\bootstrap-utilities.rtl.css" />
+    <Content Include="assets\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\bootstrap.rtl.css" />
+    <Content Include="assets\css\bootstrap.rtl.min.css" />
+    <Content Include="assets\img\Bia2.jfif" />
+    <Content Include="assets\img\bia3.jfif" />
+    <Content Include="assets\img\K1-store-dhhp-1.png" />
+    <Content Include="assets\js\bootstrap.bundle.js" />
+    <Content Include="assets\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\js\bootstrap.esm.js" />
+    <Content Include="assets\js\bootstrap.esm.min.js" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="Content\Admin\bootstrap-responsive.min.css" />
     <Content Include="Content\Admin\bootstrap.min.css" />
     <Content Include="Content\Admin\style-responsive.css" />
     <Content Include="Content\Admin\style.css" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\bootstrapa.css" />
     <Content Include="Content\etalage.css" />
-    <Content Include="Content\font.css" />
     <Content Include="Content\fontmin.css" />
     <Content Include="Content\form.css" />
     <Content Include="Content\PagedList.css" />
@@ -369,6 +388,28 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap.minb.js" />
     <Content Include="AppSettings.config" />
+    <Content Include="assets\css\bootstrap-grid.css.map" />
+    <Content Include="assets\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="assets\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="assets\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="assets\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="assets\css\bootstrap-utilities.css.map" />
+    <Content Include="assets\css\bootstrap-utilities.min.css.map" />
+    <Content Include="assets\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="assets\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="assets\css\bootstrap.css.map" />
+    <Content Include="assets\css\bootstrap.min.css.map" />
+    <Content Include="assets\css\bootstrap.rtl.css.map" />
+    <Content Include="assets\css\bootstrap.rtl.min.css.map" />
+    <Content Include="assets\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\js\bootstrap.esm.js.map" />
+    <Content Include="assets\js\bootstrap.esm.min.js.map" />
+    <Content Include="assets\js\bootstrap.js.map" />
+    <Content Include="assets\js\bootstrap.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -419,6 +460,8 @@
     <Content Include="Views\GioHang\TongTien.cshtml" />
     <Content Include="Views\Home\TrangChu.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\SanPhamBanChay.cshtml" />
+    <Content Include="Views\Home\SanPhamBanChayShow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -429,10 +472,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>

@@ -2,27 +2,62 @@
     ViewBag.Title = "Trang chủ";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="card w-75 mx-auto h-25" style="margin-top: -60px">
+    <div id="carouselExampleIndicators" class="carousel slide rounded-3" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <img src="~/assets/img/Bia3.jfif" class="d-block col-6 img-fluid rounded-5" alt="...">
+                    <img src="~/assets/img/Bia2.jfif" class="d-block col-6 img-fluid rounded-2" alt="...">
+                </div>
+                
+            </div>
+            <div class="carousel-item">
+                <div class="row">
 
-<div class="well well-small">
-    <h3><a class="btn-mini pull-right shopBtn" href="@Url.Action("SanPhamMoi","Home")" title="View more">Xem Thêm</a> Mặt hàng mới </h3>
-    <div class="row-fluid">
-        <div id="newProductCar" class="carousel slide">
+                    <img src="~/assets/img/Bia2.jfif" class="d-block col-6 img-fluid rounded-2" alt="...">
+                    <img src="~/assets/img/Bia3.jfif" class="d-block col-6 img-fluid rounded-2" alt="...">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <img src="~/assets/img/Bia3.jfif" class="d-block col-6 img-fluid rounded-2" alt="...">
+                    <img src="~/assets/img/Bia2.jfif" class="d-block col-6 img-fluid rounded-2" alt="...">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<div class=" mt-5">
+    
+            @Html.Action("SanPhamBanChayShow", "Home")
+
+</div>
+<hr class="soften container mt-5" />
+<div class="mt-5">
+    
 
             @Html.Action("SanPhamMoiShow", "Home")
 
-        </div>
-    </div>
 
 </div>
 <!--
 mat hang sale
 -->
-<div class="well well-small">
-    <h3><a class="btn-mini pull-right shopBtn" href="@Url.Action("SanPhamSales","Home")" title="View more">Xem Thêm</a> Mặt hàng giảm giá </h3>
-    <div class="row-fluid" style="margin-top:10px">
-        <div id="newProductCar" class="carousel slide">
-            @Html.Action("SanPhamSalesShow", "Home")
-
-        </div>
-    </div>
+<hr class="soften container mt-5" />
+<div class="mt-5">
+    @Html.Action("SanPhamSalesShow", "Home")
 </div>

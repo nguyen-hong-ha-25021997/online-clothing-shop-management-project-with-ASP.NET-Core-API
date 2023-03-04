@@ -84,3 +84,4 @@ D:\GitBash\Project\ShopOnline\online-clothing-shop-management-project-with-ASP.N
 D:\GitBash\Project\ShopOnline\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.csproj.CopyComplete
 D:\GitBash\Project\ShopOnline\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.dll
 D:\GitBash\Project\ShopOnline\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.pdb
+D:\GitBash\Project\ShopOnline\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\obj\Debug\WebQACustomerArea.csproj.AssemblyReference.cache

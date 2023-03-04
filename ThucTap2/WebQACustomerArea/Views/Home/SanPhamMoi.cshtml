@@ -8,33 +8,43 @@
 <!--
 Sanphammoi
   -->
-<div class="well well-small">
-    <p><h3>Sản phẩm mới</h3></p>
+<div class="px-5">
+    <h2 class="text-center pt-3 text-primary">Sản phẩm mới</h2>
     <hr class="soften" />
     <div class="row-fluid">
-        <div id="newProductCar" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <ul class="thumbnails">
-                        @foreach (var item in Model)
-                        {
-                            <li class="sanpham">
-                                <div class="thumbnail">
-                                    <a class="zoomTool" href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"><span class="icon-search"></span> Xem ngay</a>
-                                    <a href="#" class="tag"></a>
-                                    <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"><img src="@Url.Content("~/"+item.Product_Image)" /></a>
-                                    <p style="margin-top:8px">@item.Product_Show</p>
-                                    <p> <b>@item.Product_Price VNĐ</b></p>
+        <div id="newProductCar" class="carousel slide row">
+            @foreach (var item in Model)
+            {
+                var value = String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", @item.Product_Price);
+                <div class=" col-md-3 mx-auto">
+                    <div class="card m-2 shadowPro">
+                        <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"></a>
+                        <img src="@Url.Content("~/Images/"+item.Product_Image)" class="card-img-top" alt="@Url.Content(item.Product_Image + item.Product_Style)">
+                        <div class="card-body">
+                            <h4 class="card-title">Giá: <span class="text-danger">@value VNĐ</span></h4>
+                            <h6 class="">Mã: @item.Product_Show</h6>
+                            <p class="card-text">Products description.</p>
+                            <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Xem chi tiết</a>
+                        </div>
+                    </div>
 
-                                </div>
-                            </li>
-                        }
-                    </ul>
                 </div>
-            </div>
-            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
-            @Html.PagedListPager(Model, page => Url.Action("SanPhamMoi", new { page = page }))
+
+            }
+
 
         </div>
     </div>
 </div>
+<div class=" ms-5 mt-2">
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("SanPhamMoi", new { page = page }), new PagedListRenderOptions
+    {
+        DisplayLinkToIndividualPages = true,
+        DisplayPageCountAndCurrentLocation = false,
+        MaximumPageNumbersToDisplay = 10,
+        LiElementClasses = new string[] { "btn btn-outline-primary" },
+    })
+</div>
+
+

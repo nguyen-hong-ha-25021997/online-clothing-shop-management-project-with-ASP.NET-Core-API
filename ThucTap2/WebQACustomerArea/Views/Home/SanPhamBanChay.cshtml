@@ -1,0 +1,47 @@
+﻿@using WebQACustomerArea.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<Product>
+@{
+    ViewBag.Title = "Sản phẩm bán chạy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--
+Sanphammoi
+  -->
+<div class="px-5">
+    <h2 class="text-center pt-3 text-primary">Sản phẩm bán chạy</h2>
+    <hr class="soften" />
+    <div class="row-fluid">
+        <div id="newProductCar" class="carousel slide row">
+            @foreach (var item in Model)
+            {
+                var value = String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", @item.Product_Price);
+                <div class=" col-md-3 mx-auto mt-3">
+                    <div class="card m-2 shadowPro">
+                        <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"></a>
+                        <img src="@Url.Content("~/Images/"+item.Product_Image)" class="card-img-top" alt="@Url.Content(item.Product_Image + item.Product_Style)">
+                        <div class="card-body">
+                            <h4 class="card-title">Giá: <span class="text-danger">@value VNĐ</span></h4>
+                            <h6 class="">Mã: @item.Product_Show</h6>
+                            <p class="card-text">Products description.</p>
+                            <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Xem chi tiết</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+<div class=" ms-5 mt-2">
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("SanPhamBanChay", new { page = page }), new PagedListRenderOptions
+    {
+        DisplayLinkToIndividualPages = true,
+        DisplayPageCountAndCurrentLocation = false,
+        MaximumPageNumbersToDisplay = 10,
+        LiElementClasses = new string[] { "btn btn-outline-primary" },
+    })
+</div>

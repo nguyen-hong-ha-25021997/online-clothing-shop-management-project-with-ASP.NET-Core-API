@@ -3,5 +3,6 @@
 
 @foreach (var item in Model)
 {
-    <li class=""><a href="@Url.Action("TungLoaiSanPham", "Home", new { @loai = item.Category_Id})">@item.Category_Name</a></li>
+    <li><a class="dropdown-item" href="@Url.Action("TungLoaiSanPham", "Home", new { @loai = item.Category_Id})">@item.Category_Name</a></li>
+    @*<li class="list-group-item"><a href="@Url.Action("TungLoaiSanPham", "Home", new { @loai = item.Category_Id})">@item.Category_Name</a></li>*@
 }
