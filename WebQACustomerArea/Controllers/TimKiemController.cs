@@ -22,7 +22,9 @@ namespace WebQACustomerArea.Controllers
         {
 
             ViewBag.TuKhoa = tukhoa;
-            List<Product> listkq = db.Products.Where(n => n.Product_Name.Contains(tukhoa) || n.Product_Show.Contains(tukhoa) || n.Product_Price.ToString().Contains(tukhoa) || n.Product_Style.Contains(tukhoa)).ToList();
+            List<Product> listkq = db.Products.Where(n => n.Product_Name.Contains(tukhoa)
+            //|| n.Product_Show.Contains(tukhoa)
+            || n.Product_Price.ToString().Contains(tukhoa) || n.Product_Unit.Contains(tukhoa)).ToList();
 
 
             int pageSize = 12;
@@ -41,7 +43,9 @@ namespace WebQACustomerArea.Controllers
         {
             string tukhoa = f["txtTimKiem"].ToString();
 
-            List<Product> listkq = db.Products.Where(n => n.Product_Name.Contains(tukhoa) || n.Product_Show.Contains(tukhoa) || n.Product_Price.ToString().Contains(tukhoa) || n.Product_Style.Contains(tukhoa)).ToList();
+            List<Product> listkq = db.Products.Where(n => n.Product_Name.Contains(tukhoa)
+            //|| n.Product_Show.Contains(tukhoa)
+            || n.Product_Price.ToString().Contains(tukhoa) || n.Product_Unit.Contains(tukhoa)).ToList();
             ViewBag.TuKhoa = tukhoa;
 
             int pageSize = 12;

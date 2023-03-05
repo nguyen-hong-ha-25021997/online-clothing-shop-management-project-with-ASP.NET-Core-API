@@ -81,7 +81,7 @@ namespace APIManager.Controllers
                 var keyword = pagingParams.KeywordCol.ToUpper().ToTrim();
                 if (pagingParams.ColName == "Order_PurchaseTime")
                 {
-                    query = query.Where(x => (x.Order_PurchaseTime.ToString("dd/MM/yyyy").Contains(keyword)));
+                    query = query.Where(x => (x.Order_PurchaseTime.Value.ToString("dd/MM/yyyy").Contains(keyword)));
 
                 }
                 if (pagingParams.ColName == "CustomerName")

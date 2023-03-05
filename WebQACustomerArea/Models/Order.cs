@@ -23,7 +23,7 @@ namespace WebQACustomerArea.Models
         public int Order_Id { get; set; }
         public Nullable<int> Account_Id { get; set; }
         public System.DateTime Order_PurchaseTime { get; set; }
-        public System.DateTime Order_DeliveryTime { get; set; }
+        public Nullable<System.DateTime> Order_DeliveryTime { get; set; }
         public string Order_DeliveryAddress { get; set; }
         public string Order_DeliveryContact { get; set; }
         public int Order_Status { get; set; }

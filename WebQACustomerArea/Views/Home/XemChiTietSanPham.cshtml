@@ -10,12 +10,12 @@
     <div class="row">
         <div class="card col-md-4">
             <img src="@Url.Content("~/Images/" + Model.Product_Image)" class="card-img-top" alt="...">
-            <div class="card-body">
+            @*<div class="card-body">
                 <h5 class="card-title text-center">Ảnh sản phẩm <span class="text-info">@Model.Product_Show</span> </h5>
-            </div>
+            </div>*@
             <div class="container">
                 <p> Giá thành: <b class="text-danger">@Model.Product_Price VNĐ</b></p>
-                <p> Size: <b>@Model.Product_Size</b></p>
+                <p> Size: <b>@Model.Product_Name</b></p>
                 <p>Ghi chú: <b class="text-warning">@Model.Product_Note</b></p>
             </div>
             
@@ -30,7 +30,7 @@
                 <h2 class="text-center">Thông tin sản phẩm</h2>
             </div>
             <hr class="soften mt-2 mb-2" />
-            <p>Đây là thông tin chi tiết về sản phẩm</p>
+            <p>@Model.Product_Detail</p>
         </div>
     </div>
     

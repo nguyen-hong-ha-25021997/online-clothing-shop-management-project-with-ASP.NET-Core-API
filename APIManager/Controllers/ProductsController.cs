@@ -30,10 +30,10 @@ namespace APIManager.Controllers
                     {
                         Product_Id = pd.Product_Id,
                         Product_Name = pd.Product_Name,
-                        Product_Style = pd.Product_Style,
-                        Product_Size = pd.Product_Size,
+                        Product_Unit = pd.Product_Unit,
+                        Product_Detail = pd.Product_Detail,
                         Product_Image = pd.Product_Image,
-                        Product_Show = pd.Product_Show,
+                        //Product_Show = pd.Product_Show,
                         Product_Price = pd.Product_Price,
                         Product_Quantity = pd.Product_Quantity,
                         Product_Note = pd.Product_Note,

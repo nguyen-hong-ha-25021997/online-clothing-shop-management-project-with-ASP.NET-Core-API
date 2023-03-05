@@ -87,7 +87,7 @@ namespace WebQACustomerArea.Controllers
             int pageNumber = (page ?? 1);
 
             loaiSP = type;
-            return View(db.Products.Where(n => n.Product_Style == type).ToList().ToPagedList(pageNumber, pageSize));
+            return View(db.Products.Where(n => n.Product_Unit == type).ToList().ToPagedList(pageNumber, pageSize));
         }
         public PartialViewResult SanPhamMoiShow()
         {

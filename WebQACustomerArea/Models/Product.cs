@@ -23,14 +23,14 @@ namespace WebQACustomerArea.Models
         public int Product_Id { get; set; }
         public Nullable<int> Category_Id { get; set; }
         public string Product_Name { get; set; }
-        public string Product_Size { get; set; }
+        public string Product_Detail { get; set; }
         public string Product_Image { get; set; }
-        public string Product_Show { get; set; }
         public int Product_Price { get; set; }
         public string Product_Note { get; set; }
         public int StatusPrice { get; set; }
-        public string Product_Style { get; set; }
+        public string Product_Unit { get; set; }
         public int Product_Quantity { get; set; }
+        public int Product_SalePrice { get; set; }
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
