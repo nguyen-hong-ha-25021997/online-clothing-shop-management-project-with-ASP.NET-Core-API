@@ -22,17 +22,17 @@ namespace WebQACustomerArea.Models
     
         public int Order_Id { get; set; }
         public Nullable<int> Account_Id { get; set; }
+        public string CustomerName { get; set; }
+        public string CustomerAddress { get; set; }
+        public string CustomerEmail { get; set; }
+        public string CustomerMobile { get; set; }
         public System.DateTime Order_PurchaseTime { get; set; }
         public Nullable<System.DateTime> Order_DeliveryTime { get; set; }
         public string Order_DeliveryAddress { get; set; }
         public string Order_DeliveryContact { get; set; }
+        public string PaymentMethod { get; set; }
         public int Order_Status { get; set; }
         public int Order_Amount { get; set; }
-        public string PaymentMethod { get; set; }
-        public string CustomerAddress { get; set; }
-        public string CustomerEmail { get; set; }
-        public string CustomerMobile { get; set; }
-        public string CustomerName { get; set; }
     
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

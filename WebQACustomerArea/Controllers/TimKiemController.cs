@@ -11,7 +11,7 @@ namespace WebQACustomerArea.Controllers
     public class TimKiemController : Controller
     {
         // GET: TimKiem
-        DbWebQAEntities db = new DbWebQAEntities();
+        DbWebTapHoaEntities db = new DbWebTapHoaEntities();
         public ActionResult Index()
         {
             return View();

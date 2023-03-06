@@ -30,7 +30,7 @@ namespace APIManager.Controllers
                     {
                         file.CopyTo(stream);
                     }
-                    string targetPath = @"C:\Users\Ha\Desktop\online-clothing-shop\WebQACustomerArea\Resources\Images";
+                    string targetPath = @"D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\WebQACustomerArea\Resources\Images";
                     string destFile = System.IO.Path.Combine(targetPath, fileName);
                     Directory.CreateDirectory(targetPath);
                     System.IO.File.Copy(fullPath, destFile, true);

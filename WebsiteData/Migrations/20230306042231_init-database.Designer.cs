@@ -10,8 +10,8 @@ using WebsiteData.Data.Context;
 namespace WebsiteData.Migrations
 {
     [DbContext(typeof(WebsiteDbContext))]
-    [Migration("20210414041524_customerDetail")]
-    partial class customerDetail
+    [Migration("20230306042231_init-database")]
+    partial class initdatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -282,10 +282,11 @@ namespace WebsiteData.Migrations
                     b.Property<string>("Order_DeliveryContact")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Order_DeliveryTime")
+                    b.Property<DateTime?>("Order_DeliveryTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Order_PurchaseTime")
+                    b.Property<DateTime?>("Order_PurchaseTime")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GetDate()");
@@ -359,6 +360,9 @@ namespace WebsiteData.Migrations
                     b.Property<int?>("Category_Id")
                         .HasColumnType("int");
 
+                    b.Property<string>("Product_Detail")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Product_Image")
                         .HasColumnType("nvarchar(max)");
 
@@ -372,13 +376,13 @@ namespace WebsiteData.Migrations
                     b.Property<int>("Product_Price")
                         .HasColumnType("int");
 
-                    b.Property<string>("Product_Show")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Product_Quantity")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Product_Size")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Product_SalePrice")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Product_Style")
+                    b.Property<string>("Product_Unit")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("StatusPrice")

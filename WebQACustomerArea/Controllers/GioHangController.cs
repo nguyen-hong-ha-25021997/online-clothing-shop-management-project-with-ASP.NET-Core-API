@@ -16,7 +16,7 @@ namespace WebQACustomerArea.Controllers
         private string merchantPassword = "1db0e9b420e85d4a81cb5f94bbf46620";
         private string merchantEmail = "nguyenhongha250297@gmail.com";
 
-        DbWebQAEntities db = new DbWebQAEntities();
+        DbWebTapHoaEntities db = new DbWebTapHoaEntities();
         // GET: GioHang
         public ActionResult Index()
         {

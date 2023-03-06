@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebsiteData.Migrations
 {
-    public partial class _18_01 : Migration
+    public partial class initdatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -135,10 +135,15 @@ namespace WebsiteData.Migrations
                     Order_Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Account_Id = table.Column<int>(type: "int", nullable: true),
+                    CustomerName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CustomerAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CustomerEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CustomerMobile = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Order_PurchaseTime = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GetDate()"),
-                    Order_DeliveryTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Order_DeliveryTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Order_DeliveryAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Order_DeliveryContact = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PaymentMethod = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Order_Status = table.Column<int>(type: "int", nullable: false),
                     Order_Amount = table.Column<int>(type: "int", nullable: false)
                 },
@@ -161,11 +166,13 @@ namespace WebsiteData.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Category_Id = table.Column<int>(type: "int", nullable: true),
                     Product_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Product_Size = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Product_Unit = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Product_Detail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Product_Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Product_Show = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Product_Price = table.Column<int>(type: "int", nullable: false),
+                    Product_SalePrice = table.Column<int>(type: "int", nullable: false),
                     Product_Note = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Product_Quantity = table.Column<int>(type: "int", nullable: false),
                     StatusPrice = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

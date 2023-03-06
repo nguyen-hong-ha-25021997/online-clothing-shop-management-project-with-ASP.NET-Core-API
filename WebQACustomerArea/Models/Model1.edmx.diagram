@@ -4,31 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="38559cf1885f41d6b56b2018a12167e9" Name="Diagram1">
-        <EntityTypeShape EntityType="DbWebQAModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.Account" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.AspNetRoleClaim" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.AspNetUserClaim" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.AspNetUserLogin" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.AspNetUserToken" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.Category" Width="1.5" PointX="0.75" PointY="21" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.Function" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.Order" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.OrderDetail" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.Permission" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.Product" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbWebQAModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="DbWebQAModel.FK_AspNetUserClaims_Account_UserId" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.FK_AspNetUserLogins_Account_UserId" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.FK_AspNetUserTokens_Account_UserId" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.FK_Order_Account_Account_Id" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.FK_Permissions_Account_AccountId" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.FK_AspNetRoleClaims_Function_RoleId" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.FK_Product_Category_Category_Id" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.FK_Permissions_Function_FunctionId" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.FK_OrderDetail_Order_Order_Id" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.FK_OrderDetail_Product_Product_Id" ManuallyRouted="false" />
-        <AssociationConnector Association="DbWebQAModel.AspNetUserRoles" ManuallyRouted="false" />
+      <Diagram DiagramId="1fdc1dda60414b2db1c64418dd14a903" Name="Diagram1">
+        <EntityTypeShape EntityType="DbWebTapHoaModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.Account" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.AspNetRoleClaim" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.AspNetUserClaim" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.AspNetUserLogin" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.AspNetUserToken" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.Category" Width="1.5" PointX="0.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.Function" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.Order" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.OrderDetail" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.Permission" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbWebTapHoaModel.Product" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_AspNetUserClaims_Account_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_AspNetUserLogins_Account_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_AspNetUserTokens_Account_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_Order_Account_Account_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_Permissions_Account_AccountId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_AspNetRoleClaims_Function_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_Product_Category_Category_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_Permissions_Function_FunctionId" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_OrderDetail_Order_Order_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.FK_OrderDetail_Product_Product_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="DbWebTapHoaModel.AspNetUserRoles" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

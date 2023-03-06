@@ -7,7 +7,7 @@ namespace WebQACustomerArea.Models
 {
     public class GioHang
     {
-        DbWebQAEntities db = new DbWebQAEntities();
+        DbWebTapHoaEntities db = new DbWebTapHoaEntities();
         public int maSP { get; set; }
         public string tenSP { get; set; }
         public string hinhanh { get; set; }

@@ -10,7 +10,7 @@ namespace WebQACustomerArea.Controllers
 {
     public class HomeController : Controller
     {
-        DbWebQAEntities db = new DbWebQAEntities();
+        DbWebTapHoaEntities db = new DbWebTapHoaEntities();
 
         public static string loaiSP;
         //Trang chur
