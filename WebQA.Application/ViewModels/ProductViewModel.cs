@@ -12,10 +12,10 @@ namespace WebQA.Application.ViewModels
         public int? Category_Id { get; set; }
         public string Category_Name { get; set; }
         public string Product_Name { get; set; }
-        public string Product_Style { get; set; }
-        public string Product_Size { get; set; }
+        public string Product_Unit { get; set; }
+        public string Product_Detail { get; set; }
         public string Product_Image { get; set; }
-        public string Product_Show { get; set; }
+        //public string Product_Show { get; set; }
         public int Product_Price { get; set; }
         public string Product_Note { get; set; }
         public int Product_Quantity { get; set; }

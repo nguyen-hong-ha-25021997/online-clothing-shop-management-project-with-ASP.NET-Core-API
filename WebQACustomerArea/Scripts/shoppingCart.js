@@ -146,7 +146,7 @@
                         $('#divCheckout').hide();
                         cart.deleteAll();
                         setTimeout(function () {
-                            $('#cartContent').html('Cảm ơn bạn đã đặt hàng thành công. Chúng tôi sẽ liên hệ sớm nhất.');
+                            $('#cartContent').html('Cảm ơn bạn đã đặt hàng thành công. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.');
                         }, 2000);
                     }
 

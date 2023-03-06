@@ -46,7 +46,7 @@
             </table>
             <div class="container">
                 <button class="btn btn-success" id="btnContinue">Tiếp tục mua hàng</button>
-                <button class="btn btn-danger" id="btnDeleteAll">Xóa giỏ hàng</button>
+                <a class="btn btn-danger" href="@Url.Action("xoagiohangAll", "GioHang")" >Xóa giỏ hàng</a>
                 <div class="modal fade" id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" style="display: none;" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
@@ -87,11 +87,7 @@
                                             </div>
 
                                             <label class="form-check-label"><input type="radio" id="rdoCash" class="form-check-input" name="paymentMethod" value="CASH" checked="checked" /> Tiền mặt</label>
-                                            <label class="form-check-label"><input type="radio" id="rdoNL" class="form-check-input" name="paymentMethod" value="NL" /> TK Ngân Lượng</label>
-
                                             <label class="form-check-label"><input type="radio" id="rdoBank" class="form-check-input" value="ATM_ONLINE" name="paymentMethod" /> Thẻ Ngân hàng nội địa</label>
-
-                                            <label class="form-check-label"><input type="radio" id="rdoVisa" class="form-check-input" name="paymentMethod" value="VISA" /> VISA</label>
                                             <div id="bankContent" class="boxContent" style="display:none;">
                                                 Danh sách ngân hàng nội địa:
                                                 <ul class="cardList clearfix">
@@ -100,14 +96,6 @@
                                                         <label for="vcb_ck_on">
                                                             <i class="VCB" title="Ngân hàng TMCP Ngoại Thương Việt Nam"></i>
                                                             <input type="radio" ID="VCB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="vnbc_ck_on">
-                                                            <i class="DAB" title="Ngân hàng Đông Á"></i>
-                                                            <input type="radio" ID="DAB" GroupName="bankcode" />
 
                                                         </label>
                                                     </li>
@@ -123,22 +111,6 @@
                                                         <label for="sml_atm_mb_ck_on">
                                                             <i class="MB" title="Ngân hàng Quân Đội"></i>
                                                             <input type="radio" ID="MB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="shb_ck_on">
-                                                            <i class="SHB" title="Ngân hàng Sài Gòn - Hà Nội"></i>
-                                                            <input type="radio" ID="SHB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="sml_atm_vib_ck_on">
-                                                            <i class="VIB" title="Ngân hàng Quốc tế"></i>
-                                                            <input type="radio" ID="VIB" GroupName="bankcode" />
 
                                                         </label>
                                                     </li>
@@ -168,73 +140,9 @@
                                                     </li>
 
                                                     <li class="bank-online-methods ">
-                                                        <label for="sml_atm_hdb_ck_on">
-                                                            <i class="HDB" title="Ngân hàng Phát triển Nhà TPHCM"></i>
-                                                            <input type="radio" ID="HDB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
                                                         <label for="sml_atm_msb_ck_on">
                                                             <i class="MSB" title="Ngân hàng Hàng Hải"></i>
                                                             <input type="radio" ID="MSB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="sml_atm_nvb_ck_on">
-                                                            <i class="NVB" title="Ngân hàng Nam Việt"></i>
-                                                            <input type="radio" ID="NVB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="sml_atm_vab_ck_on">
-                                                            <i class="VAB" title="Ngân hàng Việt Á"></i>
-                                                            <input type="radio" ID="VAB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="sml_atm_vpb_ck_on">
-                                                            <i class="VPB" title="Ngân Hàng Việt Nam Thịnh Vượng"></i>
-                                                            <input type="radio" ID="VPB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="sml_atm_scb_ck_on">
-                                                            <i class="SCB" title="Ngân hàng Sài Gòn Thương tín"></i>
-                                                            <input type="radio" ID="SCB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="ojb_ck_on">
-                                                            <i class="OJB" title="Ngân hàng Đại Dương"></i>
-                                                            <input type="radio" ID="OJB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="bnt_atm_pgb_ck_on">
-                                                            <i class="PGB" title="Ngân hàng Xăng dầu Petrolimex"></i>
-                                                            <input type="radio" ID="PGB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="bnt_atm_gpb_ck_on">
-                                                            <i class="GPB" title="Ngân hàng TMCP Dầu khí Toàn Cầu"></i>
-                                                            <input type="radio" ID="GPB" GroupName="bankcode" />
 
                                                         </label>
                                                     </li>
@@ -247,38 +155,7 @@
                                                         </label>
                                                     </li>
 
-                                                    <li class="bank-online-methods ">
-                                                        <label for="bnt_atm_sgb_ck_on">
-                                                            <i class="SGB" title="Ngân hàng Sài Gòn Công Thương"></i>
-                                                            <input type="radio" ID="SGB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="bnt_atm_nab_ck_on">
-                                                            <i class="NAB" title="Ngân hàng Nam Á"></i>
-                                                            <input type="radio" ID="NAB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
-                                                    <li class="bank-online-methods ">
-                                                        <label for="sml_atm_bab_ck_on">
-                                                            <i class="BAB" title="Ngân hàng Bắc Á"></i>
-                                                            <input type="radio" ID="BAB" GroupName="bankcode" />
-
-                                                        </label>
-                                                    </li>
-
                                                 </ul>
-                                            </div>
-                                            <div id="nganluongContent" class="boxContent" style="display:none;">
-                                                <p class="fst-italic">
-                                                    Thanh toán trực tuyến AN TOÀN và ĐƯỢC BẢO VỆ, sử dụng thẻ ngân hàng trong và ngoài nước hoặc nhiều hình thức tiện lợi khác.
-                                                    Được bảo hộ & cấp phép bởi NGÂN HÀNG NHÀ NƯỚC, ví điện tử duy nhất được cộng đồng ƯA THÍCH NHẤT 2 năm liên tiếp, Bộ Thông tin Truyền thông trao giải thưởng Sao Khuê
-                                                    <br />Giao dịch. Đăng ký ví NgânLượng.vn miễn phí <a href="https://www.nganluong.vn/?portal=nganluong&amp;page=user_register" target="_blank">tại đây</a>
-                                                </p>
                                             </div>
                                             <div class="alert alert-danger" id="divMessage" style="display:none;"></div>
                                             <div class="clearfix"> </div>

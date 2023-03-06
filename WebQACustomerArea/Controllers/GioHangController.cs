@@ -81,6 +81,19 @@ namespace WebQACustomerArea.Controllers
             }
             return RedirectToAction("GioHang");//không sử dụng View vì k có định nghĩa kiểu Model
         }
+
+        public ActionResult xoagiohangAll()
+        {
+            //lấy giỏ hàng ra session
+            List<GioHang> lstgiohang = laygiohang();
+            lstgiohang.Clear();
+            if (lstgiohang.Count == 0)
+            {
+                return RedirectToAction("TrangChu", "Home");
+            }
+            return RedirectToAction("GioHang");
+        }
+
         public ActionResult xoagiohang(int maSP)
         {
             Product sp = db.Products.SingleOrDefault(n => n.Product_Id == maSP);

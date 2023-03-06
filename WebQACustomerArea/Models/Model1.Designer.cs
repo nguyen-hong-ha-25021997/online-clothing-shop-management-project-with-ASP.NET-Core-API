@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Ha\Desktop\online-clothing-shop-management-project-with-ASP.NET-Core-API\ThucTap2\WebQACustomerArea\Models\Models.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Ha-Start\Phan mem ca nhan\Code\shop_quan_ap\online-clothing-shop-management-project-with-ASP.NET-Core-API\WebQACustomerArea\Models\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

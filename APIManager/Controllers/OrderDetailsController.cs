@@ -58,13 +58,13 @@ namespace APIManager.Controllers
                             OrderDetail_Id = odt.OrderDetail_Id,
                             Order_Id = odt.Order_Id,
                             Product_Name = pd.Product_Name,
-                            Product_Style = pd.Product_Style,
-                            Product_Size = pd.Product_Size,
+                            Product_Unit = pd.Product_Unit,
+                            //Product_Detail = pd.Product_Detail,
                             Product_Image = pd.Product_Image,
                             Product_Price = pd.Product_Price,
                             OrderDetail_Quantity = odt.OrderDetail_Quantity,
                             OrderDetail_Amount = odt.OrderDetail_Amount,
-                            Order_PurchaseTime = od.Order_PurchaseTime,
+                            Order_PurchaseTime = od.Order_PurchaseTime ?? DateTime.Now,
                         };
             if (!string.IsNullOrEmpty(pagingParams.fromDate) && !string.IsNullOrEmpty(pagingParams.toDate))
             {
@@ -78,8 +78,8 @@ namespace APIManager.Controllers
 
                 query = query.Where(x =>
                                         (x.Product_Name ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) ||
-                                        (x.Product_Style ?? string.Empty).ToUpper().Contains(keyword) ||
-                                        (x.Product_Size ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) ||
+                                        (x.Product_Unit ?? string.Empty).ToUpper().Contains(keyword) ||
+                                        //(x.Product_Size ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) ||
 
                                     // Lọc số
 
@@ -100,14 +100,14 @@ namespace APIManager.Controllers
                 {
                     query = query.Where(x => (x.Product_Name ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) || (x.Product_Name ?? string.Empty).ToUpper().Contains(keyword));
                 }
-                if (pagingParams.ColName == "Product_Style")
+                if (pagingParams.ColName == "Product_Unit")
                 {
-                    query = query.Where(x => (x.Product_Style ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) || (x.Product_Style ?? string.Empty).ToUpper().Contains(keyword));
+                    query = query.Where(x => (x.Product_Unit ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) || (x.Product_Unit ?? string.Empty).ToUpper().Contains(keyword));
                 }
-                if (pagingParams.ColName == "Product_Size")
-                {
-                    query = query.Where(x => (x.Product_Size ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) || (x.Product_Size ?? string.Empty).ToUpper().Contains(keyword));
-                }
+                //if (pagingParams.ColName == "Product_Size")
+                //{
+                //    query = query.Where(x => (x.Product_Size ?? string.Empty).ToUpper().ToUnSign().Contains(keyword.ToUnSign()) || (x.Product_Size ?? string.Empty).ToUpper().Contains(keyword));
+                //}
                 if (pagingParams.ColName == "OrderDetail_Amount")
                 {
                     query = query.Where(x => (x.OrderDetail_Amount.ToString().Contains(keyword)));
@@ -125,23 +125,23 @@ namespace APIManager.Controllers
                     query = query.OrderByDescending(x => x.Product_Name);
                 }
 
-                if (pagingParams.SortKey == "Product_Style" && pagingParams.SortValue == "ascend")
+                if (pagingParams.SortKey == "Product_Unit" && pagingParams.SortValue == "ascend")
                 {
-                    query = query.OrderBy(x => x.Product_Style);
+                    query = query.OrderBy(x => x.Product_Unit);
                 }
-                if (pagingParams.SortKey == "Product_Style" && pagingParams.SortValue == "descend")
+                if (pagingParams.SortKey == "Product_Unit" && pagingParams.SortValue == "descend")
                 {
-                    query = query.OrderByDescending(x => x.Product_Style);
+                    query = query.OrderByDescending(x => x.Product_Unit);
                 }
 
-                if (pagingParams.SortKey == "Product_Size" && pagingParams.SortValue == "ascend")
-                {
-                    query = query.OrderBy(x => x.Product_Size);
-                }
-                if (pagingParams.SortKey == "Product_Size" && pagingParams.SortValue == "descend")
-                {
-                    query = query.OrderByDescending(x => x.Product_Size);
-                }
+                //if (pagingParams.SortKey == "Product_Size" && pagingParams.SortValue == "ascend")
+                //{
+                //    query = query.OrderBy(x => x.Product_Size);
+                //}
+                //if (pagingParams.SortKey == "Product_Size" && pagingParams.SortValue == "descend")
+                //{
+                //    query = query.OrderByDescending(x => x.Product_Size);
+                //}
 
                 if (pagingParams.SortKey == "OrderDetail_Amount" && pagingParams.SortValue == "ascend")
                 {

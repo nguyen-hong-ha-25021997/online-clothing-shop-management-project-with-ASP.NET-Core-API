@@ -17,11 +17,11 @@
                 <div class=" col-md-3 mx-auto mt-3">
                     <div class="card m-2 shadowPro">
                         <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})"></a>
-                        <img src="@Url.Content("~/Images/"+item.Product_Image)" class="card-img-top" alt="@Url.Content(item.Product_Image + item.Product_Style)">
+                        <img src="@Url.Content("~/Images/"+item.Product_Image)" class="card-img-top" alt="@Url.Content(item.Product_Image + item.Product_Unit)">
                         <div class="card-body">
                             <h4 class="card-title">Giá: <span class="text-danger">@value VNĐ</span></h4>
-                            <h6 class="">Mã: @item.Product_Show</h6>
-                            <p class="card-text">Products description.</p>
+                            @*<h6 class="">Mã: @item.Product_Show</h6>*@
+                        <p class="card-text">@item.Product_Name</p>
                             <a href="@Url.Action("XemChiTietSanPham","Home", new { @MaSanPham = item.Product_Id})" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Xem chi tiết</a>
                         </div>
                     </div>
