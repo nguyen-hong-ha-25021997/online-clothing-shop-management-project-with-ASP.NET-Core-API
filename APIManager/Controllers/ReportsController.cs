@@ -48,11 +48,11 @@ namespace APIManager.Controllers
                         orderby od.Order_PurchaseTime.Value.Month
                         select new ReportChartViewModel
                         {
-                            Month = od.Order_PurchaseTime.Value.Month,
+                            Month = od.Order_PurchaseTime.Value.Month.ToString(),
                             OrderAmount = od.Order_Amount,
-                            OrderDetails = (from odt in _context.OrderDetails
+                            Quantity = (from odt in _context.OrderDetails
                                         where odt.Order_Id == od.Order_Id
-                                        select odt).ToList(),
+                                        select odt).AsQueryable().Sum(x => x.OrderDetail_Quantity),
                         };
             //var a = from x in query
             //        group x by x.Month into y
@@ -64,11 +64,11 @@ namespace APIManager.Controllers
             //            Quantity = (from z in y
             //                        select z.Quantity).Sum(),
             //        };
-            var a = query.GroupBy(x => new { x.Month }).Select(x => new
+            var a = query.ToList().GroupBy(x => new { x.Month }).Select(x => new ReportChartViewModel
             {
-                Month = x.Key.Month,
-                OrderAmount = x.Sum(y => (y.OrderAmount)),
-                Quantity = x.Sum(y => (y.OrderDetails.Sum(y => y.OrderDetail_Quantity)))
+                Month = "Tháng " + x.Key.Month,
+                OrderAmount = x.Sum(x => (x.OrderAmount)),
+                Quantity = x.Sum(x => (x.Quantity)),
             }).ToList();
             return Ok(a);
         }

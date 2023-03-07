@@ -7,7 +7,7 @@ namespace WebQA.Application.ViewModels
 {
     public class ReportChartViewModel
     {
-        public int Month { get; set; }
+        public string Month { get; set; }
 
         public int OrderAmount { get; set; }
         public int Quantity { get; set; }
