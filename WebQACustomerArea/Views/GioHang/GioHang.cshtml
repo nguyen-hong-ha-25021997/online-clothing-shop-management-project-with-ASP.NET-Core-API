@@ -30,7 +30,7 @@
                         <tr>
                             <td>@item.maSP</td>
                             <td>@item.tenSP</td>
-                            <td><img src="@Url.Content("~/Images/"+@item.hinhanh)" width="100" class="img-fluid"></td>
+                            <td><img src="@Url.Content("~/Resources/Images/"+@item.hinhanh)" width="100" class="img-fluid"></td>
                             <td> @String.Format("{0:0,0}", @item.dongia) VNĐ</td>
                             @using (Html.BeginForm("capnhatgiohang", "GioHang", new { @maSP = item.maSP }))
                             {
