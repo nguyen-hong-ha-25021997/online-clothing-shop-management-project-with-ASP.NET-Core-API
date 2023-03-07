@@ -44,14 +44,15 @@ namespace APIManager.Controllers
         {
             var query = from od in _context.Orders
                         where od.Order_PurchaseTime.Value.Year == DateTime.Now.Year
+                        
                         orderby od.Order_PurchaseTime.Value.Month
-                        select new
+                        select new ReportChartViewModel
                         {
                             Month = od.Order_PurchaseTime.Value.Month,
                             OrderAmount = od.Order_Amount,
-                            Quantity = (from odt in _context.OrderDetails
+                            OrderDetails = (from odt in _context.OrderDetails
                                         where odt.Order_Id == od.Order_Id
-                                        select odt.OrderDetail_Quantity).Sum(),
+                                        select odt).ToList(),
                         };
             //var a = from x in query
             //        group x by x.Month into y
@@ -67,7 +68,7 @@ namespace APIManager.Controllers
             {
                 Month = x.Key.Month,
                 OrderAmount = x.Sum(y => (y.OrderAmount)),
-                //Quantity = x.Sum(y => (y.Quantity))
+                Quantity = x.Sum(y => (y.OrderDetails.Sum(y => y.OrderDetail_Quantity)))
             }).ToList();
             return Ok(a);
         }
