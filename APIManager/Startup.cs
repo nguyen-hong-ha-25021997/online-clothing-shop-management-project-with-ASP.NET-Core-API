@@ -29,6 +29,10 @@ namespace APIManager
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp";
+            });
 
             services.AddDbContext<WebsiteDbContext>(options => 
                     options.UseSqlServer(Configuration.GetConnectionString("DbWebQAConnection")));
@@ -101,6 +105,10 @@ namespace APIManager
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API v1"));
+            }
+            if (!env.IsDevelopment())
+            {
+                app.UseSpaStaticFiles();
             }
 
             app.UseHttpsRedirection();
